@@ -1,9 +1,0 @@
-{
-  "makefile.launchConfigurations": [
-    {
-      "cwd": "/home/victor/Desktop/integracio-numerica-edps",
-      "binaryPath": "/home/victor/Desktop/integracio-numerica-edps/polexpl",
-      "binaryArgs": []
-    }
-  ]
-}

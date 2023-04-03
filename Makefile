@@ -1,24 +1,50 @@
-CC = gcc                       					   # compiler to use
-CC_FLAGS = -Wall -pedantic -std=c99	-ggdb  # flags
+# compiler to use and flags
+CC := gcc
+CC_FLAGS := -Wall -pedantic -std=c11 -ggdb
 
-LIBRARIES := -lm
-EXECUTABLE := main 
+GNUPLOT = gnuplot
+GNUPLOT_FLAGS = -pedantic
+
+LIBS := -lm
 
 # location of header files
-INCLUDE := ./
+INCLUDE := include
+# location of binary files
+BIN := bin
+# location of .c files
+SRC := src
+# location of .gnu files
+PLOT := plot
+# Executable name
+TARGET := main
 
-# Rules are of the form:
-# target: prerequisites
-# 	 recipe
+# We create a list of all the sources by looking for all the .cpp and .c files
+SOURCES := $(wildcard $(SRC)/*.c)
 
+# We create a list of object files by replacing the .cpp or .c extension with .o in the list of sources
+OBJECTS := $(patsubst $(SRC)/%.c, $(BIN)/%.o, $(filter %.c, $(SOURCES))) 
 
-# default target to be executed is the first encountered. To change it, uncomment the following line and replace all with another target.
-# .DEFAULT_GOAL := all
-# all: $(BIN)/$(EXECUTABLE) 
+# We need to tell the compiler where to find the headers
+HEADERS := $(wildcard $(INCLUDE)/*.h)
 
-# $^ evaluates to $(SRC)/rf_pendulum.c $(SRC)/pendulum.c $(SRC)/rk78.c
-# S@ evaluates to rf_pendulum
-# The option -I is will tell the compiler where to find the header file.
+#  .PHONY target specifies that all and clean are not real files, but are just targets that don't produce output files.
+.PHONY: all clean
 
-polexpl: grRDF.c polexpl.c
-	@$(CC) $(CC_FLAGS) -I$(INCLUDE) $^ -o $@ $(LIBRARIES)
+all: $(BIN)/$(TARGET)
+
+# We link all the object files together to create the executable
+$(BIN)/$(TARGET): $(OBJECTS)
+	$(CC) $(CC_FLAGS) $^ -o $@ $(LIBS)
+
+# We compile the .c files
+$(BIN)/%.o: $(SRC)/%.c
+	$(CC) $(CC_FLAGS) -I$(INCLUDE) -c $< -o $@ $(LIBS)
+
+# polexpl: $(SRC)/grRDF.c $(SRC)/polexpl.c
+# 	@$(CC) $(CC_FLAGS) -I$(INCLUDE) $^ -o $(BIN)/$@ $(LIBRARIES)
+
+# plot: 
+# 	@$(GNUPLOT) $(GNUPLOT_FLAGS) $(PLOT)/placa.gnu
+
+clean:
+	rm -f $(BIN)/*.o $(BIN)/$(TARGET)
