@@ -1,0 +1,9 @@
+[Dolphin]
+SortRole=size
+Timestamp=2023,4,22,15,14,21.311
+Version=4
+ViewMode=1
+VisibleRoles=Details_text,Details_modificationtime,Details_size,CustomizedDetails
+
+[Settings]
+HiddenFilesShown=true

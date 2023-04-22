@@ -1,0 +1,146 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm, amsmath, mathtools, amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[catalan]{babel}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{fancyhdr}
+\usepackage{subcaption}
+
+\newcommand{\NN}{\ensuremath{\mathbb{N}}} % set of natural numbers
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}} % set of integers
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}} % set of rationals
+\newcommand{\RR}{\ensuremath{\mathbb{R}}} % set of real numbers
+\newcommand{\CC}{\ensuremath{\mathbb{C}}} % set of complex numbers
+\newcommand{\KK}{\ensuremath{\mathbb{K}}} % a general field
+
+\newcommand{\vf}[1]{\boldsymbol{\mathrm{#1}}} % math style for vectors and matrices and vector-values functions (previously it was \*vb{#1} but this does not apply to greek letters)
+\newcommand{\ii}{\mathrm{i}} % imaginary unit
+\renewcommand{\O}{\mathrm{O}} % big O-notation
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{exercici}{Exercice}
+\newtheorem{prop}{Proposició}
+\theoremstyle{definition}
+\newtheorem{definition}{Definició}
+\theoremstyle{remark}
+\newtheorem*{res}{Resolution}
+\DeclareDocumentCommand\derivative{ s o m g d() }{ 
+  % Total derivative
+  % s: star for \flatfrac flat derivative
+  % o: optional n for nth derivative
+  % m: mandatory (x in df/dx)
+  % g: optional (f in df/dx)
+  % d: long-form d/dx(...)
+    \IfBooleanTF{#1}
+    {\let\fractype\flatfrac}
+    {\let\fractype\frac}
+    \IfNoValueTF{#4}
+    {
+        \IfNoValueTF{#5}
+        {\fractype{\diffd \IfNoValueTF{#2}{}{^{#2}}}{\diffd #3\IfNoValueTF{#2}{}{^{#2}}}}
+        {\fractype{\diffd \IfNoValueTF{#2}{}{^{#2}}}{\diffd #3\IfNoValueTF{#2}{}{^{#2}}} \argopen(#5\argclose)}
+    }
+    {\fractype{\diffd \IfNoValueTF{#2}{}{^{#2}} #3}{\diffd #4\IfNoValueTF{#2}{}{^{#2}}}\IfValueT{#5}{(#5)}}
+} % differential operator
+\DeclareDocumentCommand\partialderivative{ s o m g d() }{ 
+  % Total derivative
+  % s: star for \flatfrac flat derivative
+  % o: optional n for nth derivative
+  % m: mandatory (x in df/dx)
+  % g: optional (f in df/dx)
+  % d: long-form d/dx(...)
+  \IfBooleanTF{#1}
+    {\let\fractype\flatfrac}
+    {\let\fractype\frac}
+    \IfNoValueTF{#4}{
+      \IfNoValueTF{#5}
+      {\fractype{\partial \IfNoValueTF{#2}{}{^{#2}}}{\partial #3\IfNoValueTF{#2}{}{^{#2}}}}
+      {\fractype{\partial \IfNoValueTF{#2}{}{^{#2}}}{\partial #3\IfNoValueTF{#2}{}{^{#2}}} \argopen(#5\argclose)}
+    }
+    {\fractype{\partial \IfNoValueTF{#2}{}{^{#2}} #3}{\partial #4\IfNoValueTF{#2}{}{^{#2}}}\IfValueT{#5}{(#5)}}
+} % partial differential operator
+
+\titleformat{\section}
+  {\normalfont\fontsize{11}{15}\bfseries}{\thesection}{1em}{}
+
+% \renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\theenumiii}{\roman{enumiii}}
+\renewcommand{\exp}[1]{\mathrm{e}^{#1}} % exponential function
+\DeclareMathOperator*{\im}{Im}
+\setlength\multlinegap{0pt} % disable the margins on \begin{multline} command.
+
+\title{\bfseries\Large Exercise 19}
+
+\author{Víctor Ballester Ribó\\NIU: 1570866}
+\date{\parbox{\linewidth}{\centering
+  Integració numèrica d'equacions en derivades parcials\endgraf
+  Grau en Matemàtiques\endgraf
+  Universitat Autònoma de Barcelona\endgraf
+  Febrer de 2023}}
+  \pagestyle{fancy}
+  \fancyhf{}
+  \fancyhfoffset[L]{1cm}
+  \fancyhfoffset[R]{1cm}
+  \rhead{NIU: 1570866}
+  \lhead{Víctor Ballester}
+  \cfoot{\thepage}
+  %\setlength{\headheight}{13.6pt}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+\selectlanguage{catalan}
+\maketitle
+\begin{exercici}
+  Show that the box scheme
+  $$
+    \frac{1}{2k}\left[v_m^{n+1}+v_{m+1}^{n+1}-v_m^n-v_{m+1}^n\right] +\frac{a}{2h}\left[v_{m+1}^{n+1}-v_m^{n+1}+v_{m+1}^n-v_m^n\right]=0
+  $$
+  for the homogeneous one-way wave equation $u_t+au_x=0$ is accurate of order [2,3].
+\end{exercici}
+\begin{res}
+  We need to show that for $k=\lambda h$ we have:
+  $$
+    P_{k,h}\phi-P\phi=P_{k,h}\phi=\O(k^2)+\O(h^3)
+  $$
+  because in this case we have $P\phi=\phi_t+a\phi_x=0$. Here $P_{k,h}$ is the operator of the box scheme. We have that:
+  \begin{multline*}
+    P_{k,h}\phi=\frac{1}{2k}\left[\phi(t+k,x)+\phi(t+k,x+h) - \phi(t,x)-\phi(t,x+h)\right] +\\+\frac{a}{2h}\left[\phi(t+k,x+h)-\phi(t+k,x)+\phi(t,x+h)-\phi(t,x)\right]
+  \end{multline*}
+  Now, Taylor-expanding the equation in $k$ and $h$ centered at $\phi=\phi(t,x)$, and omitting the evaluation of the functions at $(t,x)$ to simplify the reading, we have:
+  \begin{align*}
+    P_{k,h}\phi=\frac{1}{2k}\bigg[ & \phi+ k\phi_t + \frac{k^2}{2}\phi_{tt}+\frac{k^3}{6}\phi_{ttt}+                                                                                                                              \\
+                                   & + \phi +k\phi_t + h\phi_x + \frac{k^2}{2}\phi_{tt} + \frac{h^2}{2}\phi_{xx} + kh\phi_{tx} +\frac{k^3}{6}\phi_{ttt}+\frac{k^2h}{2}\phi_{ttx}+\frac{kh^2}{2}\phi_{txx}+\frac{h^3}{6}\phi_{xxx} \\
+                                   & -\phi                                                                                                                                                                                        \\
+                                   & -\phi-h\phi_x-\frac{h^2}{2}\phi_{xx}-\frac{h^3}{6}\phi_{xxx}                                                                                                                                 \\
+                                   & +\O(k^4)+\O(k^3h)+\O(k^2h^2)+(kh^3)+\O(h^4)\bigg]                                                                                                                                            \\
+    +\frac{a}{2h}\bigg[            & \phi + k\phi_t + h\phi_x + \frac{k^2}{2}\phi_{tt}+\frac{h^2}{2}\phi_{xx} + kh\phi_{tx} +\frac{k^3}{6}\phi_{ttt}+\frac{k^2h}{2}\phi_{ttx}+\frac{kh^2}{2}\phi_{txx}+\frac{h^3}{6}\phi_{xxx}    \\
+                                   & -\phi-k\phi_t-\frac{k^2}{2}\phi_{tt}-\frac{k^3}{6}\phi_{ttt}                                                                                                                                 \\
+                                   & +\phi+h\phi_x+\frac{h^2}{2}\phi_{xx}+\frac{h^3}{6}\phi_{xxx}                                                                                                                                 \\
+                                   & -\phi                                                                                                                                                                                        \\
+                                   & +\O(k^4)+\O(k^3h)+\O(k^2h^2)+(kh^3)+\O(h^4)\bigg]
+  \end{align*}
+  Which simplifies to:
+  \begin{align*}
+    P_{k,h}\phi= & \ \phi_t+\frac{k}{2}\phi_{tt}+ \frac{k^2}{6}\phi_{ttt}+ \frac{h}{2}\phi_{tx}+\frac{kh}{4}\phi_{ttx}+\frac{h^2}{4}\phi_{txx}              \\
+                 & +a\left(\phi_x+\frac{h}{2}\phi_{xx}+ \frac{h^2}{6}\phi_{xxx}+ \frac{k}{2}\phi_{tx}+\frac{k^2}{4}\phi_{ttx}+\frac{kh}{4}\phi_{txx}\right) \\
+                 & +\O{(k^3)}+\O(k^2h)+\O(kh^2)+\O{(h^3)}+\O(h^4/k)+\O(k^4/h)
+  \end{align*}
+  Now using that $\phi_t+a\phi_x=0$, and so $\phi_{tt}+a\phi_{tx}=0$, $\phi_{tx}+a\phi_{xx}=0$ and $\phi_{ttx}+a\phi_{txx}=0$, we have:
+  \begin{equation*}
+    P_{k,h}\phi=\frac{k^2}{6}\phi_{ttt}+\frac{h^2}{4}\phi_{txx} +a\frac{h^2}{6}\phi_{xxx}+ a\frac{k^2}{4}\phi_{ttx}+\O(k^3)+\O(k^2h)+\O(kh^2)+\O(h^3)+\O(h^4/k)+\O(k^4/h)
+  \end{equation*}
+  Now using that $a\phi_{xxx}=-\phi_{txx}$ and $a\phi_{ttx}=-\phi_{ttt}$, we have:
+  \begin{equation*}
+    P_{k,h}\phi=-\frac{k^2}{12}\phi_{ttt}+\frac{h^2}{12}\phi_{txx} +\O(k^3)+\O(k^2h)+\O(kh^2)+\O(h^3)+\O(h^4/k)+\O(k^4/h)
+  \end{equation*}
+  Finally, letting $k=\lambda h$ we have:
+  \begin{equation*}
+    P_{k,h}\phi=-\frac{k^2}{12}\phi_{ttt}+\frac{k^2}{12\lambda^2}\phi_{txx} +\O(h^3)=\O(k^2)+\O(h^3)
+  \end{equation*}
+\end{res}
+\end{document}

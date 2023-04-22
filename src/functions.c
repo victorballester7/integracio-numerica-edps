@@ -13,13 +13,13 @@ double h(double x, double y) {
 }
 
 double f_pol(double t, double x, double y) {
-  return 1 - 2 * (x + y);
+  return -3 - 6 * x;
 }
 
 double g_pol(double t, double x, double y) {
-  return t + x * x + y * y;
+  return 1 + t + x * x + x * x * x + y * y;
 }
 
 double h_pol(double x, double y) {
-  return x * x + y * y;
+  return 1 + x * x + x * x * x + y * y;
 }
