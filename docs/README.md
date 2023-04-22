@@ -39,4 +39,6 @@ Type `./bin/main` for more information about the arguments.
 
 Here are the results, when heating up the plate from the center with a source of constant heat:
 
-![Evolution of the temperature in a plate](plot/animation.gif)
+<!-- ![Evolution of the temperature in a plate](../plot/Images/heatmap_0.jpg) -->
+
+![Evolution of the temperature in a plate](../plot/animation.gif)

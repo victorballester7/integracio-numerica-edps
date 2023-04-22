@@ -11,7 +11,7 @@ cd plot/Images/
 echo "Converting images from pdf to jpg..."
 for f in *.pdf; do
 # change the DPI number for resolution of the image: 100 (very low resolution) ---- 1000 (very high resolution)
-  magick convert -density 100 "$f" "${f%.pdf}.jpg";
+  magick convert -density 300 "$f" "${f%.pdf}.jpg";
   if [ $? -eq 0 ]; then
     echo "Converted ${f%.pdf}.pdf to ${f%.pdf}.jpg"
   else
@@ -23,7 +23,7 @@ cd ../..
 echo "Done!"
 echo "Creating animation..."
 # Creates a gif from a series of jpg files
-convert -delay 10 -loop 0 plot/Images/*.jpg plots/animation.gif
+convert -delay 100 -loop 0 plot/Images/*.jpg plot/animation.gif
 if [ $? -eq 0 ]; then
   echo "Animation created successfully"
 else
