@@ -22,6 +22,7 @@ First download the code and compile it:
 ```
 git clone git@github.com:mathUAB/integracio-numerica-edps.git
 cd integracio-numerica-edps
+chmod +x plot.sh
 make
 ```
 
@@ -29,7 +30,6 @@ Then run the code with appropriate arguments. For example:
 
 ```
 ./bin/main ...
-chmod +x plot.sh
 ./plot.sh
 ```
 
@@ -38,3 +38,5 @@ Type `./bin/main` for more information about the arguments.
 ### Results
 
 Here are the results, when heating up the plate from the center with a source of constant heat:
+
+![Evolution of the temperature in a plate](plot/animation.gif)

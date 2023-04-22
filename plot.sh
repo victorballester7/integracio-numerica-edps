@@ -23,7 +23,7 @@ cd ../..
 echo "Done!"
 echo "Creating animation..."
 # Creates a gif from a series of jpg files
-convert -delay 10 -loop 0 plot/Images/*.jpg animation.gif
+convert -delay 10 -loop 0 plot/Images/*.jpg plots/animation.gif
 if [ $? -eq 0 ]; then
   echo "Animation created successfully"
 else
