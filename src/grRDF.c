@@ -50,8 +50,9 @@ void grRDF_pasCalExpl(grRDF *gr, double (*f)(double t, double x, double y), doub
   gr->t += gr->dt;
 
   // copy the components of v to u.
-  for (int i = 0; i < (gr->nx + 1) * (gr->ny + 1); i++)
-    gr->u[i] = v[i];
+  memcpy(gr->u, v, (gr->nx + 1) * (gr->ny + 1) * sizeof(double));
+  // for (int i = 0; i < (gr->nx + 1) * (gr->ny + 1); i++)
+  //   gr->u[i] = v[i];
 }
 
 void grRDF_escriure(grRDF *gr, FILE *fp) {
