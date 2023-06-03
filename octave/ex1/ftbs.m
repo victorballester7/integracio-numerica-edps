@@ -1,5 +1,5 @@
 % ----------------------------------------------------------------------- %
-% Implements the forward-time backward-space (FTB) scheme for the 1D wave equation u_t + a u_x = 0 with inital condition u(0,x) = u0(x) and boundary conditions u(t,x0) = 0. Also it prints the error between the numerical solution and the exact solution.
+% Implements the forward-time backward-space (FTBS) scheme for the 1D wave equation u_t + a u_x = 0 with inital condition u(0,x) = u0(x) and boundary conditions u(t,x0) = 0. Also it prints the error between the numerical solution and the exact solution.
 %
 % Parameters:
 %   a: wave speed

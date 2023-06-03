@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1682152711 "/home/victor/Desktop/integracio-numerica-edps/problems/ex19/main.tex" "main.pdf" "main" 1682152712 0
-  "/home/victor/Desktop/integracio-numerica-edps/problems/ex19/main.tex" 1682152711 7969 d3779c5d66f02e1ea70f94b631c951f2 ""
+["pdflatex"] 1683787890 "/home/victor/Desktop/integracio-numerica-edps/problems/ex19/main.tex" "main.pdf" "main" 1683787891 0
+  "/home/victor/Desktop/integracio-numerica-edps/problems/ex19/main.tex" 1683787890 11406 44463f320f36fda0b71eef35a2111ddf ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1680514707 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1680514707 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -31,9 +31,12 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1680514707 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1680514707 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1680514707 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1680514707 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1680514707 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1680514707 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1680514707 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1680514707 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1680514707 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1680514707 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1680514707 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/babel-catalan/catalan.ldf" 1680514707 10113 2e7f3b4656572a71a9061a5e27e11e94 ""
@@ -111,9 +114,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1680514707 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1680707835 4491781 539e3b5e308794ddb50e5f94f0e971f4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1680707809 8204067 6f8900b170417b1365d6d9ff673ced54 ""
-  "main.aux" 1682152712 676 960edfaaa56decf1b1bd0dfdbbbb3ee6 "pdflatex"
-  "main.out" 1682152712 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1682152711 7969 d3779c5d66f02e1ea70f94b631c951f2 ""
+  "main.aux" 1683787891 723 4175857cb2a6509c13e6b6487f5840de "pdflatex"
+  "main.out" 1683787891 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1683787890 11406 44463f320f36fda0b71eef35a2111ddf ""
   (generated)
   "main.aux"
   "main.log"

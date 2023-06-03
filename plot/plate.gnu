@@ -1,8 +1,11 @@
-set terminal pdf size 4,3.7
+set terminal pdf size 4,4
 # set terminal x11
 # Set up the color map
 set pm3d map
-set palette defined (0 "white", 1 "blue", 2 "cyan", 3 "yellow", 4 "red")
+# specify the degree of interpolation (integer from 0 (no interpolation) to 9 (very smooth surface))
+# set pm3d map interpolate 0,0
+
+# set palette defined (0 "white", 1 "blue", 2 "cyan", 3 "yellow", 4 "red")
 
 # define the data file and block separator
 datafile = 'data/grid.txt'
@@ -24,14 +27,16 @@ set ylabel "y"
 set cbrange [0:maxTemp]
 set cblabel "Temperature"
 
-# Removes all files in the current directory
-system("rm plot/Images/*")
+
+set nokey # remove the key (legend), otherwise it plots some weird stuff (letters inside the plot)
 
 do for [i=0:nblocks-1] {
   # Plot heatmap
-  # set title sprintf("Set %d",i)
-  # splot datafile using 1:2:3:4:5 index i-1 with pm3d
-  set output sprintf('plot/Images/heatmap_%d.pdf', i)
+  # add the title from the data file. The awk command prints all lines starting with # and then with the sed command we only take the i-th line
+  title_line = system(sprintf("awk '/^#/{print substr($0, 3)}' %s | sed -n '%i{p;q}'", datafile,i+1))
+  set title title_line
+
+  set output sprintf('plot/Images/heatmap_%05d.pdf', i) # 05 indicates 5 digits with leading zeros. I do this because otherwise the .gif is not sorted correctly
   splot datafile index i with pm3d
   set output
 }

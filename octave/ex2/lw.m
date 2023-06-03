@@ -24,6 +24,7 @@ function u = lw(a, h, lamb, x0, x1, t1)
     u_aux=u;
     u(2:end-1) = u(2:end-1) - lamb/2*(u(3:end) - u(1:end-2) - lamb*(u(3:end)-2*u(2:end-1)+u(1:end-2)));
     u(1) = u_aux(1) - lamb/2*(u_aux(2) - u_aux(end-1) - lamb*(u_aux(2)-2*u_aux(1)+u_aux(end-1))); % periodic boundary condition
+    % u(1) = 0;
     u(end) = u(1);
   end
   errLinf = max(abs(u_real - u));

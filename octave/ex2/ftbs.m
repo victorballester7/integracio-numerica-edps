@@ -26,6 +26,6 @@ function u = ftbs(a, h, lamb, x0, x1, t1)
   end
   errLinf = max(abs(u_real - u));
   errL2 = (sum((u_real(1:end-1) - u(1:end-1)).^2)*h)^0.5; % we do not count the last point because it is the same as the first one
-  printf("The error (in norm L^oo) is %f\n", errLinf);
-  printf("The error (in norm L^2) is %f\n", errL2);
+  % printf("The error (in norm L^oo) is %f\n", errLinf);
+  % printf("The error (in norm L^2) is %f\n", errL2);
 end

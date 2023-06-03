@@ -20,20 +20,23 @@ function u = leapfrog(a, h, lamb, x0, x1, t1)
   u = u0(x);
   k = h*lamb;
   n = t1/k;
-  u_1 = ftcs(a, h, lamb, x0, x1, k);
-  printf('\033[1A\033[1A') % Move cursor one line up (in order to remove the printf of the ftcs function)
+  % u_1 = u0(x-k);
+  u_1 = ftbs(a, h, lamb, x0, x1, k);
+  % printf('\033[1A\033[1A') % Move cursor one line up (in order to remove the printf of the ftcs function)
   u_2 = u;
   for i = 1:n
     u(2:end-1) = u_2(2:end-1) - a*lamb*(u_1(3:end) - u_1(1:end-2));
     u(1) = u_2(1) - a*lamb*(u_1(2) - u_1(end-1));
-    u(end) = u(1);
+    u(end) = u(1); % periodic boundary conditon
     % u(1) = u(end) = u_1(end-1);
+    % disp(norm(u));
+
     u_2 = u_1;
     u_1 = u;
   end
   errLinf = max(abs(u_real - u));
   errL2 = (sum((u_real(1:end-1) - u(1:end-1)).^2)*h)^0.5; % we do not count the last point because it is the same as the first one
-  printf("The error (in norm L^oo) is %f\n", errLinf);
+  % printf("The error (in norm L^oo) is %f\n", errLinf);
   printf("The error (in norm L^2) is %f\n", errL2);
 end
 % function u = leapfrog(a, h, lamb, x0, x1, t1)

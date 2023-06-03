@@ -15,8 +15,6 @@ BIN := bin
 SRC := src
 # location of .gnu files
 PLOT := plot
-# Executable name
-TARGET := main
 
 # We create a list of all the sources by looking for all the .cpp and .c files
 SOURCES := $(wildcard $(SRC)/*.c)
@@ -28,23 +26,24 @@ OBJECTS := $(patsubst $(SRC)/%.c, $(BIN)/%.o, $(filter %.c, $(SOURCES)))
 HEADERS := $(wildcard $(INCLUDE)/*.h)
 
 #  .PHONY target specifies that all and clean are not real files, but are just targets that don't produce output files.
-.PHONY: all clean
-
-all: $(BIN)/$(TARGET)
+.PHONY: clean
 
 # We link all the object files together to create the executable
-$(BIN)/$(TARGET): $(OBJECTS)
+$(BIN)/ex2: $(BIN)/ex2.o $(BIN)/grid.o $(BIN)/functions.o
+	$(CC) $(CC_FLAGS) $^ -o $@ $(LIBS)
+
+$(BIN)/ex3: $(BIN)/ex3.o $(BIN)/grid.o $(BIN)/functions.o
+	$(CC) $(CC_FLAGS) $^ -o $@ $(LIBS)
+
+$(BIN)/ex4: $(BIN)/ex4.o $(BIN)/grid.o $(BIN)/functions.o
+	$(CC) $(CC_FLAGS) $^ -o $@ $(LIBS)
+
+$(BIN)/ex5: $(BIN)/ex5.o $(BIN)/grid.o $(BIN)/functions.o
 	$(CC) $(CC_FLAGS) $^ -o $@ $(LIBS)
 
 # We compile the .c files
 $(BIN)/%.o: $(SRC)/%.c
 	$(CC) $(CC_FLAGS) -I$(INCLUDE) -c $< -o $@ $(LIBS)
 
-# polexpl: $(SRC)/grRDF.c $(SRC)/polexpl.c
-# 	@$(CC) $(CC_FLAGS) -I$(INCLUDE) $^ -o $(BIN)/$@ $(LIBRARIES)
-
-# plot: 
-# 	@$(GNUPLOT) $(GNUPLOT_FLAGS) $(PLOT)/placa.gnu
-
 clean:
-	rm -f $(BIN)/*.o $(BIN)/$(TARGET)
+	rm -f $(BIN)/*

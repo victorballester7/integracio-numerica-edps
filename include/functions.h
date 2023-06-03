@@ -1,3 +1,6 @@
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
 #define k 0.13
 #define c 0.11
 #define rho 7.8
@@ -97,3 +100,5 @@ double g_pol(double t, double x, double y);
 //   The value of h(t,x,y).
 // ----------------------------------------------
 double h_pol(double x, double y);
+
+#endif

@@ -24,6 +24,7 @@ function myplot(a, lamb, H, x0, x1, t1, scheme, mytitle)
   v4 = scheme(a,h4,lamb,x0,x1,t1);
   u = u0(x - t1);
   u_0 = u0(x);
+  xlim([0.6,0.8]);
   plot(x, u, 'g', x_num1, v1, 'color', [1 0.6 0.6], x_num2, v2, 'color', [1 0 0], x_num3, v3,'color', [0.6 0 0], x_num4, v4,'color', [0.2 0 0], x, u_0, 'b');
   legend(sprintf('Analytic solution at time t = %s',num2str(t1)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h1)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h2)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h3)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h4)),'Initial condition', 'Location', 'southoutside');
   title(mytitle);

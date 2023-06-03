@@ -97,50 +97,97 @@
 \maketitle
 \begin{exercici}
   Show that the box scheme
-  $$
+  \begin{equation}\label{eq:scheme}
     \frac{1}{2k}\left[v_m^{n+1}+v_{m+1}^{n+1}-v_m^n-v_{m+1}^n\right] +\frac{a}{2h}\left[v_{m+1}^{n+1}-v_m^{n+1}+v_{m+1}^n-v_m^n\right]=0
-  $$
+  \end{equation}
   for the homogeneous one-way wave equation $u_t+au_x=0$ is accurate of order [2,3].
 \end{exercici}
 \begin{res}
-  We need to show that for $k=\lambda h$ we have:
+  We need to check that:
+  \begin{equation}
+    \abs{\frac{\exp{kq(\xi)}-g(h\xi)}{k}}\leq C h^r\abs{\xi}^\rho
+  \end{equation}
+  for some constant $C\in\RR$ and with $r=2$ and $\rho=3$. Here $g$ is the amplification factor and $q$ is such that:
   $$
-    P_{k,h}\phi-P\phi=P_{k,h}\phi=\O(k^2)+\O(h^3)
+    \widehat{u}_t=q(\xi)\widehat{u}
   $$
-  because in this case we have $P\phi=\phi_t+a\phi_x=0$. Here $P_{k,h}$ is the operator of the box scheme. We have that:
-  \begin{multline*}
-    P_{k,h}\phi=\frac{1}{2k}\left[\phi(t+k,x)+\phi(t+k,x+h) - \phi(t,x)-\phi(t,x+h)\right] +\\+\frac{a}{2h}\left[\phi(t+k,x+h)-\phi(t+k,x)+\phi(t,x+h)-\phi(t,x)\right]
-  \end{multline*}
-  Now, Taylor-expanding the equation in $k$ and $h$ centered at $\phi=\phi(t,x)$, and omitting the evaluation of the functions at $(t,x)$ to simplify the reading, we have:
+
+  Let's compute first the amplification factor $g$. Let $v_m^n=g^n\exp{\ii m\theta}$. Then, substituting this into \eqref{eq:scheme} and using that $\lambda = k/h$, we get the following equation:
+  $$
+    \left[g+g\exp{\ii \theta}-1-\exp{\ii\theta}\right]+ a\lambda \left[g\exp{\ii\theta}-g+\exp{\ii\theta}-1\right]=0
+  $$
+  Factoring this equation we have:
   \begin{align*}
-    P_{k,h}\phi=\frac{1}{2k}\bigg[ & \phi+ k\phi_t + \frac{k^2}{2}\phi_{tt}+\frac{k^3}{6}\phi_{ttt}+                                                                                                                              \\
-                                   & + \phi +k\phi_t + h\phi_x + \frac{k^2}{2}\phi_{tt} + \frac{h^2}{2}\phi_{xx} + kh\phi_{tx} +\frac{k^3}{6}\phi_{ttt}+\frac{k^2h}{2}\phi_{ttx}+\frac{kh^2}{2}\phi_{txx}+\frac{h^3}{6}\phi_{xxx} \\
-                                   & -\phi                                                                                                                                                                                        \\
-                                   & -\phi-h\phi_x-\frac{h^2}{2}\phi_{xx}-\frac{h^3}{6}\phi_{xxx}                                                                                                                                 \\
-                                   & +\O(k^4)+\O(k^3h)+\O(k^2h^2)+(kh^3)+\O(h^4)\bigg]                                                                                                                                            \\
-    +\frac{a}{2h}\bigg[            & \phi + k\phi_t + h\phi_x + \frac{k^2}{2}\phi_{tt}+\frac{h^2}{2}\phi_{xx} + kh\phi_{tx} +\frac{k^3}{6}\phi_{ttt}+\frac{k^2h}{2}\phi_{ttx}+\frac{kh^2}{2}\phi_{txx}+\frac{h^3}{6}\phi_{xxx}    \\
-                                   & -\phi-k\phi_t-\frac{k^2}{2}\phi_{tt}-\frac{k^3}{6}\phi_{ttt}                                                                                                                                 \\
-                                   & +\phi+h\phi_x+\frac{h^2}{2}\phi_{xx}+\frac{h^3}{6}\phi_{xxx}                                                                                                                                 \\
-                                   & -\phi                                                                                                                                                                                        \\
-                                   & +\O(k^4)+\O(k^3h)+\O(k^2h^2)+(kh^3)+\O(h^4)\bigg]
+    (g-1)(1+\exp{\ii\theta})                            & = -a\lambda (g+1)(\exp{\ii\theta} - 1)                                \\
+    (g-1)\frac{\exp{\ii\theta/2}+\exp{-\ii\theta/2}}{2} & = -a\lambda\ii (g+1)\frac{\exp{\ii\theta/2}-\exp{-\ii\theta/2}}{2\ii} \\
+    (g-1)\cos(\theta/2)                                 & = -a\lambda\ii (g+1)\sin(\theta/2)                                    \\
+    g - 1                                               & = -a\lambda\ii g\tan(\theta/2) - a\lambda\ii \tan(\theta/2)           \\
+    g                                                   & = \frac{1-a\lambda\ii\tan(\theta/2)}{1+a\lambda\ii\tan(\theta/2)}
   \end{align*}
-  Which simplifies to:
+  Now let's find $q$. Taking the Fourier transform (on the $x$ variable) of the equation $u_t+au_x=0$ we have:
+  $$
+    \widehat{u}_t =\widehat{u_t}= - a\widehat{u_x}= -a\ii\xi\widehat{u}
+  $$
+  where the last equality follows from the identity $\widehat{u_x}(\xi)=\ii\xi\widehat{u}(\xi)$. So $q(\xi)=-a\ii\xi$.
+  Let's study first the Taylor expansion of $g(h\xi)$. Recall that $\tan(x)=x+ \frac{x^3}{3}+\O(x^5)$, so:
   \begin{align*}
-    P_{k,h}\phi= & \ \phi_t+\frac{k}{2}\phi_{tt}+ \frac{k^2}{6}\phi_{ttt}+ \frac{h}{2}\phi_{tx}+\frac{kh}{4}\phi_{ttx}+\frac{h^2}{4}\phi_{txx}              \\
-                 & +a\left(\phi_x+\frac{h}{2}\phi_{xx}+ \frac{h^2}{6}\phi_{xxx}+ \frac{k}{2}\phi_{tx}+\frac{k^2}{4}\phi_{ttx}+\frac{kh}{4}\phi_{txx}\right) \\
-                 & +\O{(k^3)}+\O(k^2h)+\O(kh^2)+\O{(h^3)}+\O(h^4/k)+\O(k^4/h)
+    1 - a\lambda\ii\tan(x)                              & = 1 - a\lambda \ii x - \frac{a\lambda\ii}{3}x^3 + \O(x^5)                                                                                                                 \\
+    \frac{1}{1+ a\lambda\ii\tan(x)}                     & = 1 - (a\lambda\ii\tan(x)) + {(a\lambda\ii\tan(x))}^2 -{(a\lambda\ii\tan(x))}^3 + \cdots                                                                                  \\
+                                                        & = 1 - a\lambda\ii x -a^2\lambda^2x^2 + a\lambda\ii\frac{3a^2\lambda^2 - 1}{3}x^3+ \O(x^4)                                                                                 \\
+    \frac{1- a\lambda\ii\tan(x)}{1+ a\lambda\ii\tan(x)} & = \left[1 - a\lambda\ii x - \frac{a\lambda\ii}{3}x^3 + \O(x^5)\right]\left[1 - a\lambda\ii x -a^2\lambda^2x^2 + a\lambda\ii\frac{3a^2\lambda^2 - 1}{3}x^3+ \O(x^4)\right] \\
+                                                        & = 1 -2a\lambda \ii x -2a^2\lambda^2x^2 + 2a\lambda\ii\frac{3a^2\lambda^2-1}{3}x^3 +\O(x^4)
   \end{align*}
-  Now using that $\phi_t+a\phi_x=0$, and so $\phi_{tt}+a\phi_{tx}=0$, $\phi_{tx}+a\phi_{xx}=0$ and $\phi_{ttx}+a\phi_{txx}=0$, we have:
-  \begin{equation*}
-    P_{k,h}\phi=\frac{k^2}{6}\phi_{ttt}+\frac{h^2}{4}\phi_{txx} +a\frac{h^2}{6}\phi_{xxx}+ a\frac{k^2}{4}\phi_{ttx}+\O(k^3)+\O(k^2h)+\O(kh^2)+\O(h^3)+\O(h^4/k)+\O(k^4/h)
-  \end{equation*}
-  Now using that $a\phi_{xxx}=-\phi_{txx}$ and $a\phi_{ttx}=-\phi_{ttt}$, we have:
-  \begin{equation*}
-    P_{k,h}\phi=-\frac{k^2}{12}\phi_{ttt}+\frac{h^2}{12}\phi_{txx} +\O(k^3)+\O(k^2h)+\O(kh^2)+\O(h^3)+\O(h^4/k)+\O(k^4/h)
-  \end{equation*}
-  Finally, letting $k=\lambda h$ we have:
-  \begin{equation*}
-    P_{k,h}\phi=-\frac{k^2}{12}\phi_{ttt}+\frac{k^2}{12\lambda^2}\phi_{txx} +\O(h^3)=\O(k^2)+\O(h^3)
-  \end{equation*}
+  Substituting $x=h\xi/2$ in the latter expression we have:
+  $$
+    g(h\xi) =  1 -a\lambda \ii h\xi -\frac{a^2\lambda^2}{2}h^2\xi^2 + a\lambda\ii\frac{3a^2\lambda^2-1}{12}h^3\xi^3 +\O(h^4)
+  $$
+  On the other hand the expansion of $\exp{kq(\xi)}=\exp{-a\lambda\ii h\xi}$ is:
+  $$
+    \exp{-a\lambda\ii h\xi}=1-a\lambda\ii h\xi-\frac{a^2\lambda^2}{2}h^2\xi^2+\frac{a^3\lambda^3\ii}{6} h^3\xi^3+\O(h^4)
+  $$
+  Thus:
+  $$
+    \abs{\frac{\exp{kq(\xi)}-g(h\xi)}{k}}=\abs{\frac{\frac{1}{12}a\lambda \ii (1-a^2\lambda^2)h^3\xi^3 + \O(h^4)}{\lambda h}}\leq  \frac{1}{12}\abs{a} \abs{1-a^2\lambda^2}h^2\abs{\xi}^3 +\O(h^3)
+  $$
+  So we take $C:=\frac{1}{12}\abs{a} \abs{1-a^2\lambda^2}$.
+  % We need to show that for $k=\lambda h$ we have:
+  % $$
+  % P_{k,h}\phi-P\phi=P_{k,h}\phi=\O(k^2)+\O(h^3)
+  % $$
+  % because in this case we have $P\phi=\phi_t+a\phi_x=0$. Here $P_{k,h}$ is the operator of the box scheme. We have that:
+  % \begin{multline*}
+  % P_{k,h}\phi=\frac{1}{2k}\left[\phi(t+k,x)+\phi(t+k,x+h) - \phi(t,x)-\phi(t,x+h)\right] +\\+\frac{a}{2h}\left[\phi(t+k,x+h)-\phi(t+k,x)+\phi(t,x+h)-\phi(t,x)\right]
+  % \end{multline*}
+  % Now, Taylor-expanding the equation in $k$ and $h$ centered at $\phi=\phi(t,x)$, and omitting the evaluation of the functions at $(t,x)$ to simplify the reading, we have:
+  % \begin{align*}
+  % P_{k,h}\phi=\frac{1}{2k}\bigg[ & \phi+ k\phi_t + \frac{k^2}{2}\phi_{tt}+\frac{k^3}{6}\phi_{ttt}+                                                                                                                              \\
+  %  & + \phi +k\phi_t + h\phi_x + \frac{k^2}{2}\phi_{tt} + \frac{h^2}{2}\phi_{xx} + kh\phi_{tx} +\frac{k^3}{6}\phi_{ttt}+\frac{k^2h}{2}\phi_{ttx}+\frac{kh^2}{2}\phi_{txx}+\frac{h^3}{6}\phi_{xxx} \\
+  %  & -\phi                                                                                                                                                                                        \\
+  %  & -\phi-h\phi_x-\frac{h^2}{2}\phi_{xx}-\frac{h^3}{6}\phi_{xxx}                                                                                                                                 \\
+  %  & +\O(k^4)+\O(k^3h)+\O(k^2h^2)+(kh^3)\bigg]                                                                                                                                                    \\
+  % +\frac{a}{2h}\bigg[            & \phi + k\phi_t + h\phi_x + \frac{k^2}{2}\phi_{tt}+\frac{h^2}{2}\phi_{xx} + kh\phi_{tx} +\frac{k^3}{6}\phi_{ttt}+\frac{k^2h}{2}\phi_{ttx}+\frac{kh^2}{2}\phi_{txx}+\frac{h^3}{6}\phi_{xxx}    \\
+  %  & -\phi-k\phi_t-\frac{k^2}{2}\phi_{tt}-\frac{k^3}{6}\phi_{ttt}                                                                                                                                 \\
+  %  & +\phi+h\phi_x+\frac{h^2}{2}\phi_{xx}+\frac{h^3}{6}\phi_{xxx}                                                                                                                                 \\
+  %  & -\phi                                                                                                                                                                                        \\
+  %  & +\O(k^3h)+\O(k^2h^2)+(kh^3)+\O(h^4)\bigg]
+  % \end{align*}
+  % Note that all the terms of $\O(h^\alpha)$ in the first summand vanish and the same applies for $\O(k^\alpha)$ in the second summand. This latter expression simplifies to:
+  % \begin{align*}
+  % P_{k,h}\phi= & \ \phi_t+\frac{k}{2}\phi_{tt}+ \frac{k^2}{6}\phi_{ttt}+ \frac{h}{2}\phi_{tx}+\frac{kh}{4}\phi_{ttx}+\frac{h^2}{4}\phi_{txx}              \\
+  %  & +a\left(\phi_x+\frac{h}{2}\phi_{xx}+ \frac{h^2}{6}\phi_{xxx}+ \frac{k}{2}\phi_{tx}+\frac{k^2}{4}\phi_{ttx}+\frac{kh}{4}\phi_{txx}\right) \\
+  %  & +\O{(k^3)}+\O(k^2h)+\O(kh^2)+\O{(h^3)}
+  % \end{align*}
+  % Now using that $\phi_t+a\phi_x=0$, and so $\phi_{tt}+a\phi_{tx}=0$, $\phi_{tx}+a\phi_{xx}=0$ and $\phi_{ttx}+a\phi_{txx}=0$, we have:
+  % \begin{equation*}
+  % P_{k,h}\phi=\frac{k^2}{6}\phi_{ttt}+\frac{h^2}{4}\phi_{txx} +a\frac{h^2}{6}\phi_{xxx}+ a\frac{k^2}{4}\phi_{ttx}+\O(k^3)+\O(k^2h)+\O(kh^2)+\O(h^3)
+  % \end{equation*}
+  % Now using that $a\phi_{xxx}=-\phi_{txx}$ and $a\phi_{ttx}=-\phi_{ttt}$, we have:
+  % \begin{equation*}
+  % P_{k,h}\phi=-\frac{k^2}{12}\phi_{ttt}+\frac{h^2}{12}\phi_{txx} +\O(k^3)+\O(k^2h)+\O(kh^2)+\O(h^3)
+  % \end{equation*}
+  % Finally, letting $k=\lambda h$ we have:
+  % \begin{equation*}
+  % P_{k,h}\phi=-\frac{k^2}{12}\phi_{ttt}+\frac{k^2}{12\lambda^2}\phi_{txx} +\O(h^3)=\O(k^2)+\O(h^3)
+  % \end{equation*}
 \end{res}
 \end{document}
