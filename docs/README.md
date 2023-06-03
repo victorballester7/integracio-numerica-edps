@@ -23,7 +23,7 @@ First download the code and compile it:
 git clone git@github.com:mathUAB/integracio-numerica-edps.git
 cd integracio-numerica-edps
 chmod +x plot.sh
-make
+chmod +x execute.sh
 ```
 
 Then, run the code:
