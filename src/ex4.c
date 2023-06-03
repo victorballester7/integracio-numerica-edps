@@ -10,6 +10,10 @@ int main(int argc, char *argv[]) {
     printf("Execute as ./bin/main dx dy nx ny dt tf\n");
     return -1;
   }
+  // change of variable
+  tf *= k / (c * rho);
+  dt *= k / (c * rho);
+
   nt = (int)ceil(tf / dt) + 1;
 
   // initialize grid
@@ -34,13 +38,12 @@ int main(int argc, char *argv[]) {
   }
 
   // Exercice 2 or 4 (measuring the error with polynomial functions)
-  double errorL1 = 0;
+  double errorLoo = 0;
   for (int i = 0; i < gr.nx + 1; i++) {
     for (int j = 0; j < gr.ny + 1; j++)
-      errorL1 += fabs(gr.u[(gr.nx + 1) * i + j] - g_pol(gr.t, i * gr.dx, j * gr.dy));
+      errorLoo = MAX(errorLoo, fabs(gr.u[j * (gr.nx + 1) + i] - g_pol(gr.t, i * gr.dx, j * gr.dy)));
   }
-  errorL1 *= gr.dx * gr.dy;
-  printf("\nError in norm L1: %lf\n\n", errorL1);
+  printf("\nError in norm Loo: %g\n\n", errorLoo);
   printf("We see that the error is small but not 0.\n");
 
   fclose(fp);

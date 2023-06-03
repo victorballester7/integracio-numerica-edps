@@ -26,19 +26,18 @@ chmod +x plot.sh
 make
 ```
 
-Then run the code with appropriate arguments. For example:
+Then, run the code:
 
 ```
-./bin/main ...
-./plot.sh
+./exectue.sh ex5
 ```
 
-Type `./bin/main` for more information about the arguments.
+Type `./exectue.sh` for more information about the arguments.
 
 ### Results
 
 Here are the results, when heating up the plate from the center with a source of constant heat:
 
-<!-- ![Evolution of the temperature in a plate](../plot/Images/heatmap_0.jpg) -->
-
-![Evolution of the temperature in a plate](../plot/animation.gif)
+<p align="center">
+  <img src="../plot/animation.gif" alt="Evolution of the temperature in a plate" width="400px">
+</p>

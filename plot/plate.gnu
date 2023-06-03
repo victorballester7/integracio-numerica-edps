@@ -2,7 +2,8 @@ set terminal pdf size 4,4
 # set terminal x11
 # Set up the color map
 set pm3d map
-# specify the degree of interpolation (integer from 0 (no interpolation) to 9 (very smooth surface))
+# specify the degree of interpolation (integer from 1 (very low interpolation) to 9 (very smooth surface))
+# 0,0 means that gnuplot will choose the degree of interpolation automatically
 # set pm3d map interpolate 0,0
 
 # set palette defined (0 "white", 1 "blue", 2 "cyan", 3 "yellow", 4 "red")
@@ -25,7 +26,7 @@ set size ratio -1 # set aspect ratio x-y to 1
 set xlabel "x"
 set ylabel "y"
 set cbrange [0:maxTemp]
-set cblabel "Temperature"
+set cblabel "Temperatura"
 
 
 set nokey # remove the key (legend), otherwise it plots some weird stuff (letters inside the plot)

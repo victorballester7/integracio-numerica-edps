@@ -1,0 +1,27 @@
+\documentclass{standalone}
+
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+      xmin=0,xmax=1,
+      ylabel={Temperatura},
+      xlabel={$y$},
+      legend columns = 5,
+      legend style={at={(0.475,-0.25)},anchor=center},
+      legend cell align={left},
+    ]
+    \def\xmax{\pgfkeysvalueof{/pgfplots/xmax}}
+    \def\xmin{\pgfkeysvalueof{/pgfplots/xmin}}
+    \def\ymax{\pgfkeysvalueof{/pgfplots/ymax}}
+    \def\ymin{\pgfkeysvalueof{/pgfplots/ymin}}
+    \addplot[thick,no markers,violet!95!red!100!yellow,smooth] table {../data/data0.txt};
+    \addplot[thick,no markers,violet!70!red!80!yellow,smooth] table {../data/data1.txt};
+    \addplot[thick,no markers,violet!50!red!60!yellow,smooth] table {../data/data2.txt};
+    \addplot[thick,no markers,violet!25!red!40!yellow,smooth] table {../data/data3.txt};
+    \addplot[thick,no markers,violet!10!red!10!yellow,smooth] table {../data/data4.txt};
+    \legend{$\tau=0.01$, $\tau=0.1$, $\tau=0.3$, $\tau=0.6$, $\tau=1$}
+  \end{axis}
+\end{tikzpicture}
+\end{document}

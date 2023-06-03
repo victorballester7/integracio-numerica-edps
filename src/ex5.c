@@ -1,3 +1,5 @@
+#include <time.h>
+
 #include "../include/functions.h"
 #include "../include/grid.h"
 
@@ -12,7 +14,8 @@ int main(int argc, char *argv[]) {
   }
 
   // change of variable
-  tf = k * tf / (c * rho);
+  tf *= k / (c * rho);
+  dt *= k / (c * rho);
 
   nt = (int)ceil(tf / dt) + 1;
 
@@ -30,6 +33,7 @@ int main(int argc, char *argv[]) {
   int maxit = 20;
 
   // compute the solution
+  clock_t t_init = clock();
   write_grid(&gr, fp);
   for (int i = 1; i < nt; i++) {
     fprintf(fp, "\n");  // To avoid gnuplot detecting an extra datablock.
@@ -37,6 +41,9 @@ int main(int argc, char *argv[]) {
     write_grid(&gr, fp);
   }
 
+  clock_t t_end = clock();
+
+  printf("Time employed: %lf\n", ((double)(t_end - t_init)) / CLOCKS_PER_SEC);
   fclose(fp);
   return 0;
 }

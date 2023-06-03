@@ -1,6 +1,6 @@
 echo "Creating plots..."
 # Remove all previous plots
-rm plot/Images/*.pdf plot/Images/animation_jpg/*.jpg plot/*.gif
+rm -f plot/Images/*.pdf plot/Images/animation_jpg/*.jpg plot/*.gif
 
 gnuplot -p plot/plate.gnu
 if [ $? -eq 0 ]; then

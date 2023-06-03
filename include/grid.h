@@ -6,6 +6,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define DX gr->dx
+#define DY gr->dy
+#define NX gr->nx
+#define NY gr->ny
+#define T gr->t
+#define DT gr->dt
+#define MUX gr->mux
+#define MUY gr->muy
+#define U(j, i) gr->u[(NX + 1) * (j) + (i)]
+
 // ----------------------------------------------
 // Grid
 // ----------------------------------------------
@@ -102,5 +112,4 @@ void free_grid(Grid *gr);
 //  g: function that returns the value of g(t,x,y) at a given point (boundary condition)
 // ----------------------------------------------
 void CrankNicolsonStep(Grid *gr, double w, double tol, int maxit, double (*f)(double t, double x, double y), double (*g)(double t, double x, double y));
-
 #endif

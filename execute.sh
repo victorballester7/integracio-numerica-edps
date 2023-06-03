@@ -7,26 +7,36 @@ ex5="ex5"
 
 # location of binary files
 BIN="bin"
-# location of .gnu files
-PLOT="plot"
-
-if [ -z "$1" ]; then
+if [ -z "$1" ] || ([ "$1" != "$ex2" ] && [ "$1" != "$ex3" ] && [ "$1" != "$ex4" ] && [ "$1" != "$ex5" ]); then
   echo "Invalid argument. Use one of the following: $ex2 $ex3 $ex4 $ex5"
   exit 1
 fi
 
 make $BIN/$1
 
-if [ -z "$2" ] && [ -z "$3" ] && [ -z "$4" ] && [ -z "$5" ] && [ -z "$6" ] && [ -z "$7" ]; then
+if [ -z "$7" ]; then
   echo "No arguments provided. Use the syntax: ./execute.sh $1 <dx> <dy> <nx> <ny> <dt> <tf>"
-  # default values for ex2, ex3 and ex4
-  if [ "$1" != "$ex5" ]; then
-    echo "Executing the default command: ./$BIN/$1 0.1 0.1 5 5 0.001 0.1"
-    ./$BIN/$1 0.1 0.1 5 5 0.001 0.1
-  else
-    echo "Executing the default command: ./$BIN/$1 0.01 0.01 100 100 0.001 1"
-    ./$BIN/$1 0.01 0.01 100 100 0.001 1
-  fi
+  case $1 in
+    $ex2)
+      echo "Executing the default command: ./$BIN/$1 0.01 0.01 100 100 0.001 1"
+      ./$BIN/$1 0.01 0.01 100 100 0.001 1
+      ;;
+    $ex3)
+      echo "Executing the default command: ./$BIN/$1 0.1 0.1 10 10 0.1 1"
+      ./$BIN/$1 0.1 0.1 10 10 0.1 1
+      ;;
+    $ex4)
+      echo "Executing the default command: ./$BIN/$1 0.1 0.1 10 10 0.001 1"
+      ./$BIN/$1 0.1 0.1 10 10 0.001 1
+      ;;
+    $ex5)
+      echo "Executing the default command: ./$BIN/$1 0.01 0.01 100 100 0.01 1"
+      ./$BIN/$1 0.01 0.01 100 100 0.01 1
+      ;;
+    *)
+      echo "Invalid argument. Use one of the following: $ex2, $ex3, $ex4, $ex5"
+      ;;
+  esac
 else
   ./$BIN/$1 $2 $3 $4 $5 $6 $7
 fi
