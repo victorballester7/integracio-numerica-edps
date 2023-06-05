@@ -94,6 +94,7 @@
 \begin{document}
 \selectlanguage{catalan}
 \maketitle
+\setcounter{exercici}{2}
 \begin{exercici}
   For values of $x\in[-1,3]$ and $t\in [0,2.4]$, compare the following numerical schemes for the one-dimensional wave equation
   $$
@@ -151,6 +152,7 @@
     \caption{Plot of the analytical and numerical solutions of the convergent schemes}
   \end{figure}
 \end{res}
+\setcounter{exercici}{14}
 \begin{exercici}
   Solve $u_t+u_x=0$, $x\in[-1,1]$, $t\in[0,2.1]$, with initial condition $u(0,x)=\sin(2\pi x)$ and periodicity $u(t,-1)=u(t,1)$. Use the following schemes:
   \begin{enumerate}
@@ -193,5 +195,18 @@
     \end{subfigure}
     \caption{Plot of the analytical and numerical solutions of the convergent schemes}
   \end{figure}
+\end{res}
+\setcounter{exercici}{27}
+\begin{exercici}
+  Per a un problema de Dirichlet al quadrat unitat amb condicions de frontera homogènies, comproveu experimentalment que:
+  \begin{enumerate}
+    \item La discretització per diferències finites de segon ordre de l'equació
+          de Poisson dóna lloc a un esquema globalment convergent amb error quadràtic en el pas.
+    \item La discretització mitjançant el laplacià de 9 punts (problema 26) dona lloc a un esquema globalment convergent amb error quàrtic en el pas.
+  \end{enumerate}
+  Feu-ho de manera computacionalment ineficient: construïu la matriu del sistema (\texttt{help ones}, \texttt{help diag}) i resoleu-lo amb \texttt{A\symbol{92}b}, suposant que A és la matriu i b el terme independent. Fins a quines dimensions podeu arribar raonablement?
+\end{exercici}
+\begin{res}
+
 \end{res}
 \end{document}
