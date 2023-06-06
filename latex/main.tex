@@ -105,7 +105,7 @@ L'objectiu d'aquesta pràctica és resoldre el problema mixt següent per a l'eq
 \end{equation}
 on $\Omega$ és la regió rectangular de la placa, que en el nostre cas serà $\Omega = [0,1]\times[0,1]$, i $T$ és el temps final de la simulació.
 
-Donades funcions $f(t,x,y)$, $g(t,x,y)$ i $h(x,y)$ resoldrem aquest problema usant diferències finites. Discretitzem primer l'espai i el temps. Considerem dues particions de l'interval $[0,1]$ en $n_x+1$ i $N_y+1$ subintervals equidistants amb separacions $\delta_x=1/n_x$ i $\delta_y=1/n_y$ respectivament. A més discretitzem l'interval temporal $[0,T]$ en $n_t+1$ subintervals equidistants amb separació $\delta_t=T/n_t$. D'ara endavant, denotarem la solució $u(k\delta_t, i\delta_x, j\delta_y)$ per $u_{k,i,j}$ i les seves respectives aproximacions per diferències finites per $v_{k,i,j}$.
+Donades funcions $f(t,x,y)$, $g(t,x,y)$ i $h(x,y)$ resoldrem aquest problema usant diferències finites. Discretitzem primer l'espai i el temps. Considerem dues particions de l'interval $[0,1]$ en $n_x+1$ i $n_y+1$ subintervals equidistants amb separacions $\delta_x=1/n_x$ i $\delta_y=1/n_y$ respectivament. A més discretitzem l'interval temporal $[0,T]$ en $n_t+1$ subintervals equidistants amb separació $\delta_t=T/n_t$. D'ara endavant, denotarem la solució $u(k\delta_t, i\delta_x, j\delta_y)$ per $u_{k,i,j}$ i les seves respectives aproximacions per diferències finites per $v_{k,i,j}$.
 
 Considerem primer el següent mètode explícit, que s'obté de prendre diferències centrades de segon ordre per l'espai i de primer ordre endavant per al temps:
 $$

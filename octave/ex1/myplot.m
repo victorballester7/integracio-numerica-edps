@@ -22,9 +22,16 @@ function myplot(a, lamb, H, x0, x1, t1, scheme, mytitle)
   v3 = scheme(a,h3,lamb,x0,x1,t1);
   u = u0(x - t1);
   u_0 = u0(x);
-  plot(x, u, 'g', x_num1, v1, 'color', [1 0.6 0.6], x_num2, v2, 'color', [1 0 0], x_num3, v3,'color', [0.6 0 0], 'r', x, u_0, 'b');
-  legend(sprintf('Analytic solution at time t = %s',num2str(t1)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h1)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h2)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h3)), 'Initial condition', 'Location', 'southoutside');
-  title(mytitle);
-  xlabel('t');
-  ylabel('x');
+  lineW=4;
+  plot(x, u, 'g',  "linewidth", lineW,x_num1, v1, 'color', [1 0.6 0.6],  "linewidth", lineW,x_num2, v2, 'color', [1 0 0], "linewidth", lineW, x_num3, v3,'color', [0.6 0 0], "linewidth", lineW, x, u_0, 'b', "linewidth", lineW);
+  l=legend(sprintf('Analytic solution at time t = %s',num2str(t1)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h1)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h2)), sprintf('Numerical solution at time t = %s with h = %s',num2str(t1), num2str(h3)), 'Initial condition', 'Location', 'southoutside');
+  t = title(mytitle);
+  size = 33;
+  Y = xlabel('t');
+  X = ylabel('x');
+  set (l, "fontsize", size);
+  set (t, "fontsize", size);
+  set (X, "fontsize", size);
+  set (Y, "fontsize", size);
+  set(gca, "linewidth", lineW, "fontsize", size)
 end

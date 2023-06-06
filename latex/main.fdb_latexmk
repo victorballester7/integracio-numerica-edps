@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1685811239 "/home/victor/Desktop/integracio-numerica-edps/latex/main.tex" "main.pdf" "main" 1685811240 0
+["pdflatex"] 1686081670 "/home/victor/Desktop/integracio-numerica-edps/latex/main.tex" "main.pdf" "main" 1686081671 0
   "../plot/Images/heatmap_00010.pdf" 1685810668 176496 a210fb2a8688179acbc88a7d8545e4f2 ""
   "../plot/Images/heatmap_00030.pdf" 1685810674 169635 b508fb8d42eb05b1aed1ca7909ed45bf ""
   "../plot/Images/heatmap_00060.pdf" 1685810682 166449 0a5fe54506da8ab1ba33702e9d808438 ""
   "../plot/Images/heatmap_00100.pdf" 1685810694 164984 ecf81e4fc4125349046f1d702a0ce56f ""
-  "/home/victor/Desktop/integracio-numerica-edps/latex/main.tex" 1685811238 13850 8442a8303902a0de693a5dc82f52598f ""
+  "/home/victor/Desktop/integracio-numerica-edps/latex/main.tex" 1686081669 13850 52d9107c40c0c60dae7ca1073255622d ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1685692256 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1685692256 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1685692256 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -114,9 +114,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1685784422 4493604 868eb9f183785b6f5cdd229f8b5ca0e9 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685784403 8204065 78598711a061ce04f4b4dca499bf659e ""
   "Images/graphic.pdf" 1685810936 35186 c4b1c8847d069b9542865cc87ff967bc ""
-  "main.aux" 1685811240 1731 6b4572b9ebcf7cb92a3570cb22871054 "pdflatex"
-  "main.out" 1685811240 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1685811238 13850 8442a8303902a0de693a5dc82f52598f ""
+  "main.aux" 1686081670 1731 6b4572b9ebcf7cb92a3570cb22871054 "pdflatex"
+  "main.out" 1686081670 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1686081669 13850 52d9107c40c0c60dae7ca1073255622d ""
   (generated)
   "main.aux"
   "main.log"

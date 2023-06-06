@@ -14,7 +14,7 @@
 %   u: the numerical solution at time t1
 % ----------------------------------------------------------------------- %
 
-function u = laxfried(a, h, lamb, x0, x1, t1)
+function [u, errLinf, errL2] = lf(a, h, lamb, x0, x1, t1)
   x = x0:h:x1;
   u_real = u0(x-t1);
   u = u0(x);
@@ -26,7 +26,7 @@ function u = laxfried(a, h, lamb, x0, x1, t1)
     u(end) = u(end-1);
   end
   errLinf = max(abs(u_real - u));
-  errL2 = (sum((u_real(1:end-1) - u(1:end-1)).^2)*h)^0.5; % we do not count the last point because it is the same as the first one
+  errL2 =  (sum((u_real(1:end-1) - u(1:end-1)).^2)*h)^0.5; 
   % printf("The error (in norm L^oo) is %f\n", errLinf);
-  printf("The error (in norm L^2) is %f\n", errL2);
+  % printf("The error (in norm L^2) is %f\n", errL2);
 end

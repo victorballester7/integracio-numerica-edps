@@ -14,7 +14,7 @@
 %   u: the numerical solution at time t1
 % ----------------------------------------------------------------------- %
 
-function u = ftbs(a, h, lamb, x0, x1, t1)
+function [u, errLinf, errL2] = ftbs(a, h, lamb, x0, x1, t1)
   x = x0:h:x1;
   u_real = u0(x-t1);
   u = u0(x);

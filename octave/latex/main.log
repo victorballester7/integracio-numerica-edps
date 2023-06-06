@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.5)  7 MAY 2023 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.3)  6 JUN 2023 21:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -351,32 +351,100 @@ Package caption Info: New subtype `subfigure' on input line 239.
 \c@subfigure=\count296
 Package caption Info: New subtype `subtable' on input line 239.
 \c@subtable=\count297
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-\c@theorem=\count298
-\c@exercici=\count299
-\c@prop=\count300
-\c@definition=\count301
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count298
+\lst@gtempboxa=\box57
+\lst@token=\toks33
+\lst@length=\count299
+\lst@currlwidth=\dimen190
+\lst@column=\count300
+\lst@pos=\count301
+\lst@lostspace=\dimen191
+\lst@width=\dimen192
+\lst@newlines=\count302
+\lst@lineno=\count303
+\lst@maxwidth=\dimen193
+ (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count304
+\lst@skipnumbers=\count305
+\lst@framebox=\box58
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count306
+)) (/usr/share/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `listings' support loaded on input line 3131.
+Package cleveref Info: always capitalise cross-reference names on input line 7825.
+Package cleveref Info: include cross-reference names in hyperlinks on input line 7836.
+Package cleveref Info: always capitalise cross-reference names on input line 7852.
+Package cleveref Info: include cross-reference names in hyperlinks on input line 7852.
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+\c@theorem=\count307
+\c@exercici=\count308
+\c@prop=\count309
+\c@definition=\count310
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
  (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
@@ -387,29 +455,9 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count302
-\scratchdimen=\dimen190
-\scratchbox=\box57
-\nofMPsegments=\count303
-\nofMParguments=\count304
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count305
-\MPscratchDim=\dimen191
-\MPnumerator=\count306
-\makeMPintoPDFobject=\count307
-\everyMPtoPDFconversion=\toks34
-))) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-\Gin@req@height=\dimen192
-\Gin@req@width=\dimen193
+)
+\Gin@req@height=\dimen194
+\Gin@req@width=\dimen195
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -445,83 +493,119 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 94.
- (./main.out) (./main.out)
+Package hyperref Info: Link coloring ON on input line 149.
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Info: Redefining \l on input line 94.
-LaTeX Info: Redefining \L on input line 94.
+LaTeX Info: Redefining \l on input line 149.
+LaTeX Info: Redefining \L on input line 149.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count311
+\scratchdimen=\dimen196
+\scratchbox=\box59
+\nofMPsegments=\count312
+\nofMParguments=\count313
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen197
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
+\everyMPtoPDFconversion=\toks35
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@lstlisting=\count317
+LaTeX Font Info:    Trying to load font information for U+msa on input line 152.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 152.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Images/ftbs.pdf, id=7, 593.21625pt x 497.86pt>
+<Images/ftbs.pdf, id=8, 897.3525pt x 692.5875pt>
 File: Images/ftbs.pdf Graphic file (type pdf)
 <use Images/ftbs.pdf>
-Package pdftex.def Info: Images/ftbs.pdf  used on input line 138.
-(pdftex.def)             Requested size: 237.01411pt x 198.91257pt.
-<Images/lf.pdf, id=8, 593.21625pt x 497.86pt>
+Package pdftex.def Info: Images/ftbs.pdf  used on input line 197.
+(pdftex.def)             Requested size: 237.01411pt x 182.92186pt.
+<Images/lf.pdf, id=9, 864.22874pt x 686.565pt>
 File: Images/lf.pdf Graphic file (type pdf)
 <use Images/lf.pdf>
-Package pdftex.def Info: Images/lf.pdf  used on input line 143.
-(pdftex.def)             Requested size: 237.01411pt x 198.91257pt.
-<Images/l.pdf, id=9, 593.21625pt x 497.86pt>
+Package pdftex.def Info: Images/lf.pdf  used on input line 202.
+(pdftex.def)             Requested size: 237.01411pt x 188.28738pt.
+<Images/l.pdf, id=10, 864.22874pt x 686.565pt>
 File: Images/l.pdf Graphic file (type pdf)
 <use Images/l.pdf>
-Package pdftex.def Info: Images/l.pdf  used on input line 148.
-(pdftex.def)             Requested size: 237.01411pt x 198.91257pt.
-<Images/ex2-ftbs.pdf, id=10, 573.14125pt x 404.51125pt>
-File: Images/ex2-ftbs.pdf Graphic file (type pdf)
-<use Images/ex2-ftbs.pdf>
-Package pdftex.def Info: Images/ex2-ftbs.pdf  used on input line 186.
-(pdftex.def)             Requested size: 237.01411pt x 167.28265pt.
-<Images/ex2-lw.pdf, id=11, 573.14125pt x 404.51125pt>
-File: Images/ex2-lw.pdf Graphic file (type pdf)
-<use Images/ex2-lw.pdf>
-Package pdftex.def Info: Images/ex2-lw.pdf  used on input line 191.
-(pdftex.def)             Requested size: 237.01411pt x 167.28265pt.
+Package pdftex.def Info: Images/l.pdf  used on input line 207.
+(pdftex.def)             Requested size: 237.01411pt x 188.28738pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./Images/ftbs.pdf> <./Images/lf.pdf
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (12.30441pt too wide) in paragraph at lines 218--232
+ [][] 
+ []
+
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+<Images/ftcs.pdf, id=34, 897.3525pt x 692.5875pt>
+File: Images/ftcs.pdf Graphic file (type pdf)
+<use Images/ftcs.pdf>
+Package pdftex.def Info: Images/ftcs.pdf  used on input line 246.
+(pdftex.def)             Requested size: 237.01411pt x 182.92186pt.
+<Images/lf_div.pdf, id=35, 897.3525pt x 692.5875pt>
+File: Images/lf_div.pdf Graphic file (type pdf)
+<use Images/lf_div.pdf>
+Package pdftex.def Info: Images/lf_div.pdf  used on input line 251.
+(pdftex.def)             Requested size: 237.01411pt x 182.92186pt.
+ [2 <./Images/ftbs.pdf> <./Images/lf.pdf
 
 pdfTeX warning: pdflatex (file ./Images/lf.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./Images/l.pdf
 
 pdfTeX warning: pdflatex (file ./Images/l.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [3 <./Images/ex2-ftbs.pdf> <./Images/ex2-lw.pdf
+>] [3 <./Images/ftcs.pdf> <./Images/lf_div.pdf
+
+pdfTeX warning: pdflatex (file ./Images/lf_div.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/ex2-ftbs.pdf, id=149, 721.69624pt x 746.79pt>
+File: Images/ex2-ftbs.pdf Graphic file (type pdf)
+<use Images/ex2-ftbs.pdf>
+Package pdftex.def Info: Images/ex2-ftbs.pdf  used on input line 314.
+(pdftex.def)             Requested size: 237.01411pt x 245.25636pt.
+<Images/ex2-lw.pdf, id=150, 721.69624pt x 746.79pt>
+File: Images/ex2-lw.pdf Graphic file (type pdf)
+<use Images/ex2-lw.pdf>
+Package pdftex.def Info: Images/ex2-lw.pdf  used on input line 319.
+(pdftex.def)             Requested size: 237.01411pt x 245.25636pt.
+ [4 <./Images/ex2-ftbs.pdf> <./Images/ex2-lw.pdf
 
 pdfTeX warning: pdflatex (file ./Images/ex2-lw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./main.aux)
+>] [5] [6] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14655 strings out of 476025
- 233215 string characters out of 5796533
- 1879388 words of memory out of 5000000
- 34890 multiletter control sequences out of 15000+600000
- 522441 words of font info for 71 fonts, out of 8000000 for 9000
+ 19414 strings out of 476025
+ 310924 string characters out of 5796533
+ 1894388 words of memory out of 5000000
+ 39592 multiletter control sequences out of 15000+600000
+ 522945 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,77p,452b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (3 pages, 298536 bytes).
+ 75i,15n,77p,1252b,1894s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on main.pdf (6 pages, 304824 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 207 compressed objects within 3 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
