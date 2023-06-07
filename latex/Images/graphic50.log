@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.3)  3 JUN 2023 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.7)  7 JUN 2023 09:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/victor/Desktop/integracio-numerica-edps/latex/Images/graphic.tex
-(/home/victor/Desktop/integracio-numerica-edps/latex/Images/graphic.tex
+**/home/victor/Desktop/integracio-numerica-edps/latex/Images/graphic50.tex
+(/home/victor/Desktop/integracio-numerica-edps/latex/Images/graphic50.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files standalone
@@ -302,8 +302,8 @@ File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count290
 \l__pdf_internal_box=\box64
-) (./graphic.aux)
-\openout1 = `graphic.aux'.
+) (./graphic50.aux)
+\openout1 = `graphic50.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -342,28 +342,28 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
  on input line 5.
 
-PGFPlots: reading {../data/data0.txt}
-PGFPlots: reading {../data/data1.txt}
-PGFPlots: reading {../data/data2.txt}
-PGFPlots: reading {../data/data3.txt}
-PGFPlots: reading {../data/data4.txt}
+PGFPlots: reading {../data/data500.txt}
+PGFPlots: reading {../data/data501.txt}
+PGFPlots: reading {../data/data502.txt}
+PGFPlots: reading {../data/data503.txt}
+PGFPlots: reading {../data/data504.txt}
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 25.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./graphic.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./graphic50.aux) ) 
 Here is how much of TeX's memory you used:
  22777 strings out of 476025
- 607321 string characters out of 5796533
+ 607363 string characters out of 5796533
  1873388 words of memory out of 5000000
  42890 multiletter control sequences out of 15000+600000
  512287 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,18n,103p,762b,2088s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,18n,103p,764b,2088s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on graphic.pdf (1 page, 35186 bytes).
+Output written on graphic50.pdf (1 page, 35186 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  13 compressed objects within 1 object stream

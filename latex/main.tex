@@ -9,6 +9,7 @@
 \usepackage{physics}
 \usepackage{fancyhdr}
 \usepackage{subcaption}
+\usepackage{parskip}
 
 \newcommand{\NN}{\ensuremath{\mathbb{N}}} % set of natural numbers
 \newcommand{\ZZ}{\ensuremath{\mathbb{Z}}} % set of integers
@@ -20,6 +21,11 @@
 \newcommand{\vf}[1]{\boldsymbol{\mathrm{#1}}} % math style for vectors and matrices and vector-values functions (previously it was \*vb{#1} but this does not apply to greek letters)
 \newcommand{\ii}{\mathrm{i}} % imaginary unit
 \renewcommand{\O}[1]{\mathrm{O}\left(#1\right)} % big O-notation
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
 
 \newtheorem{theorem}{Teorema}
 \newtheorem{exercici}{Exercice}
@@ -105,15 +111,15 @@ L'objectiu d'aquesta pràctica és resoldre el problema mixt següent per a l'eq
 \end{equation}
 on $\Omega$ és la regió rectangular de la placa, que en el nostre cas serà $\Omega = [0,1]\times[0,1]$, i $T$ és el temps final de la simulació.
 
-Donades funcions $f(t,x,y)$, $g(t,x,y)$ i $h(x,y)$ resoldrem aquest problema usant diferències finites. Discretitzem primer l'espai i el temps. Considerem dues particions de l'interval $[0,1]$ en $n_x+1$ i $n_y+1$ subintervals equidistants amb separacions $\delta_x=1/n_x$ i $\delta_y=1/n_y$ respectivament. A més discretitzem l'interval temporal $[0,T]$ en $n_t+1$ subintervals equidistants amb separació $\delta_t=T/n_t$. D'ara endavant, denotarem la solució $u(k\delta_t, i\delta_x, j\delta_y)$ per $u_{k,i,j}$ i les seves respectives aproximacions per diferències finites per $v_{k,i,j}$.
+Donades funcions $f(t,x,y)$, $g(t,x,y)$ i $h(x,y)$ resoldrem aquest problema usant diferències finites. Discretitzem primer l'espai i el temps. Considerem dues particions de l'interval $[0,1]$ en $n_x+1$ i $n_y+1$ punts equidistants amb separacions $\delta_x=1/n_x$ i $\delta_y=1/n_y$ respectivament. A més, discretitzem l'interval temporal $[0,T]$ en $n_t+1$ punts equidistants amb separació $\delta_t=T/n_t$. D'ara endavant, denotarem la solució $u(k\delta_t, i\delta_x, j\delta_y)$ per $u_{k,i,j}$ i les seves respectives aproximacions per diferències finites per $v_{k,i,j}$.
 
 Considerem primer el següent mètode explícit, que s'obté de prendre diferències centrades de segon ordre per l'espai i de primer ordre endavant per al temps:
 $$
   v_{k+1,i,j} = (1-2\mu_x - 2\mu_y) v_{k,i,j} + \mu_x (v_{k,i+1,j} + v_{k,i-1,j}) + \mu_y (v_{k,i,j+1} + v_{k,i,j-1}) + \delta_t f_{k,i,j}
 $$
-on $\mu_x = \delta_t/{\delta_x}^2$ i $\mu_y = \delta_t/{\delta_y}^2$ i $f_{k,i,j}=f(k\delta_t, i\delta_x, j\delta_y)$. Aquest mètode és consistent i estable si $1- 2\mu_x -2 \mu_y \geq 0$. A més, l'error de convergència és $\O{\delta_t + \delta_x^2 + \delta_y^2}$.
+on $\mu_x = \delta_t/{\delta_x}^2$ i $\mu_y = \delta_t/{\delta_y}^2$ i $f_{k,i,j}=f(k\delta_t, i\delta_x, j\delta_y)$. Aquest mètode és sempre consistent i a més és estable si $1- 2\mu_x -2 \mu_y \geq 0$. A més, quan convergeix, l'error de convergència és $\O{\delta_t + \delta_x^2 + \delta_y^2}$.
 
-Fixem-nos que aquest mètode és exacte per a polinomis de grau $\leq 1$ en $t$ i grau $\leq 3$ en l'espai. Això es deu a l'expansió en sèrie de Taylor de $u$: d'una banda el coeficient que multiplica l'error $\O{\delta_t}$ de la diferència finita pel temps de primer ordre involucra $u_{tt}=0$ i anàlogament amb les derivades centrades per l'espai. Això ho podem comprovar també numèricament. Considerem el polinomi
+Fixem-nos que aquest mètode és exacte per a polinomis de grau $\leq 1$ en $t$ i grau $\leq 3$ en l'espai. Això es deu a l'expansió en sèrie de Taylor de $u$: d'una banda el coeficient que multiplica l'error $\O{\delta_t}$ de la diferència finita pel temps de primer ordre involucra $u_{tt}=0$ i anàlogament amb les derivades per l'espai d'ordre 2 (el terme de l'error involucra derivades d'ordre 4, que són nu\lgem es). Això ho podem comprovar també numèricament. Considerem el polinomi
 $$u(t,x,y)=1+t+x^2+y^2+x^3$$
 Prenent $f(t,x,y)= -3-6x$, $g(t,x,y)=1+t+x^2+y^2+x^3$ i $h(x,y)=1+x^2+y^2+x^3$ tenim que la solució del problema \eqref{eq:problema} és precisament $u(t,x,y)$. Així doncs, si prenem per exemple $\delta_x=0.1$, $\delta_y=0.1$ i $\delta_t=0.001$, que compleixen la condició d'estabilitat, per a $\Omega = [0,1]\times[0,1]$ i $T=0.1$ obtenim un error en norma $\norm{\cdot}_\infty$ entre la solució real i l'aproximada de $5.77316\cdot 10^{-15}$, que es pot considerar com a error d'aritmètica en punt flotant.\vspace*{0.25cm}
 
@@ -124,7 +130,7 @@ $$
     0   & \text{altrament}
   \end{cases}
 $$
-Suposem també que en l'instant $\tau=0$, la placa està a temperatura $0\ ^\circ\mathrm{C}$ i per a tot temps $\tau$ la frontera de la placa es manté també a $0\ ^\circ\mathrm{C}$. En aquestes condicions, l'evolució de la temperatura sobre la placa ve donada per la solució per la solució del següent problema mixt:
+Suposem també que en l'instant $\tau=0$, la placa està a temperatura $0\ ^\circ\mathrm{C}$ i per a tot temps $\tau$ la frontera de la placa es manté també a $0\ ^\circ\mathrm{C}$. En aquestes condicions, l'evolució de la temperatura sobre la placa ve donada per la solució del següent problema mixt:
 $$
   \begin{cases}
     c\rho v_{\tau} -\kappa \Delta v = F(\tau,x,y) & \text{a } [0,T] \times \Omega         \\
@@ -141,10 +147,11 @@ $$
   \end{cases}
 $$
 
-La condició d'estabilitat en l'esquema explícit que hem descrit anteriorment és necessària. Fem un experiment numèric per veure què podem obtenir si no se satisfà aquesta condició. Per fer-ho prenem $\delta_x=\delta_y=\delta_t=0.1$ i $T=1$. Amb aquests paràmetres obtenim que en $\tau=0.9$ i la temperatura en la regió de la placa amb $x=0.3$ és:
+La condició d'estabilitat en l'esquema explícit que hem descrit anteriorment és necessària. Fem un experiment numèric per veure què podem obtenir si no se satisfà aquesta condició. Per fer-ho prenem $\delta_x=\delta_y=\delta_t=0.1$ i $T=1$. Amb aquests paràmetres obtenim que en $\tau=0.9$, la temperatura en la regió de la placa amb $x=0.3$ és:
 \begin{table}[ht]
   \centering
-  \begin{tabular}{c|c|c}
+  \begin{tabular}{|c|c|c|}
+    \hline
     $x$ & $y$ & $v(0.9,x,y)$        \\ \hline\hline
     0.3 & 0.0 & 0                   \\
     0.3 & 0.1 & 42286728.810146     \\
@@ -157,63 +164,86 @@ La condició d'estabilitat en l'esquema explícit que hem descrit anteriorment �
     0.3 & 0.8 & $-54636211.331768$  \\
     0.3 & 0.9 & 16318289.975168     \\
     0.3 & 1.0 & 0                   \\
+    \hline
   \end{tabular}
 \end{table}
-Observem valors molt grossos i negatius, que no tenen sentit físic, ja que estan fora de l'interval $[0,100]$.
-El problema d'aquest mètode explícit és que requereix d'un cost elevat computacionalment quan volem els resultats amb una precisió raonable. Per exemple, si volem que $\O{\delta_t + {\delta_x}^2 + {\delta_y}^2} = \O{10^{-4}}$ aleshores podem prendre $\delta_x= \delta_y=0.01$ i $\delta_t=10^{-5}$. D'aquesta manera, $1-2\mu_x-2\mu_y = 0.6>0$ i per tant el mètode és estable. Ara bé, per arribar fins a $\tau=1$ necessitem emprar molt de temps. A la taula següent mostrem el temps que triga el programa a calcular els valors de la temperatura en els punts de la placa fins a diferents temps finals:
+
+Observem valors molt grossos i negatius, que no tenen sentit físic, ja que estan fora de l'interval $[0,100]$, que és l'interval per on s'haurien de moure les temperatures. El problema d'aquest mètode explícit és que requereix d'un cost computacional elevat quan volem els resultats amb una precisió raonable. Per exemple, si volem que $\O{\delta_t + {\delta_x}^2 + {\delta_y}^2} = \O{10^{-4}}$ aleshores podem prendre $\delta_x= \delta_y=0.01$ i $\delta_t=10^{-5}$. D'aquesta manera, $1-2\mu_x-2\mu_y = 0.6>0$ i, per tant, el mètode és estable. Ara bé, per arribar fins a $\tau=1$ necessitem emprar molt de temps. A la taula següent mostrem el temps que triga el programa a calcular els valors de la temperatura en els punts de la placa fins a diferents temps finals:
 \begin{table}[ht]
   \centering
-  \begin{tabular}{c|c}
+  \begin{tabular}{|c|c|}
+    \hline
     $T$    & Temps emprat [s] \\ \hline\hline
     0.0001 & 0.047858         \\
     0.001  & 0.569544         \\
     0.01   & 5.613888         \\
     0.1    & 57.489433        \\
+    \hline
   \end{tabular}
   \caption{Temps que triga l'esquema explícit en calcular i escriure a un fitxer tots els valors en cada graella (usant $\delta_x= \delta_y=0.01$ i $\delta_t=10^{-5}$) fins a diferents temps finals.}
 \end{table}
-Aproximadament cada temps em multiplica per 10 respecte al temps anterior. Per tant, calculem que trigaríem de l'ordre de 5 min per calcular els valors de la temperatura fins a $\tau=1$.\vspace{0.25cm}
+
+Aproximadament cada temps es multiplica per 10 respecte al temps anterior. Per tant, calculem que trigaríem de l'ordre de 10 minuts per a calcular els valors de la temperatura fins a $\tau=1$.\vspace{0.25cm}
 
 Una solució alternativa és emprar un mètode implícit, com ara el de Crank-Nicolson:
 \begin{align*}
   \frac{v_{k+1,i,j}-v_{k,i,j}}{\delta_t} & - \frac{1}{2}\left(\frac{v_{k+1,i+1,j}-2v_{k+1,i,j}+v_{k+1,i-1,j}}{{\delta_x}^2} +\frac{v_{k,i+1,j}-2v_{k,i,j}+v_{k,i-1,j}}{{\delta_x}^2} \right)  -                                             \\
                                          & -\frac{1}{2}\left( \frac{v_{k+1,i,j+1}-2v_{k+1,i,j}+v_{k+1,i,j-1}}{{\delta_y}^2}+ \frac{v_{k,i,j+1}-2v_{k,i,j}+v_{k,i,j-1}}{{\delta_y}^2}\right) = \frac{1}{2}\left(f_{k+1,i,j}+f_{k,i,j}\right)
 \end{align*}
-on hem usat la notació de \eqref{eq:problema}. Per resoldre aquest sistema, hem de resoldre un sistema lineal en les incògnites $\{v_{k+1,i,j}\}_{i,j}$, i usarem el mètode SOR per a fer-ho.
+on hem usat la notació de \eqref{eq:problema}. Per resoldre aquest sistema, hem de resoldre un sistema lineal en les incògnites $\{v_{k+1,i,j}\}_{i,j}$, i usarem el mètode SOR amb paràmetre $\omega = 1$ per a fer-ho.
 
-Ara, però, a diferència del que teníem amb el mètode explícit, l'esquema de diferències finites no serà exacte quan l'apliquem a polinomis. En efecte, prenent els mateixos valors que anteriorment ($\delta_x=\delta_y=0.1$, $\delta_t=0.001$ i $T=1$), obtenim un error en norma $\norm{\cdot}_\infty$ de $9.17816\times 10^{-5}$, que està lluny de ser considerat com a errors de punt flotant.
+Ara, però, a diferència del que teníem amb el mètode explícit, l'esquema de diferències finites no serà exacte quan l'apliquem a polinomis. En efecte, prenent els mateixos valors que anteriorment ($\delta_x=\delta_y=0.1$, $\delta_t=0.001$ i $T=1$), obtenim un error en norma $\norm{\cdot}_\infty$ de $9.17816\times 10^{-5}$, que està lluny de ser considerat com a error de punt flotant.
 
-Tot i això, aquest mètode ens permet obtenir una precisió molt més elevada en un temps raonable ja que no tenim cap condició d'estabilitat a satisfer-se i a més l'ordre de convergència és $\O{{\delta_t}^2 + {\delta_x}^2 + {\delta_y}^2}$. A la taula següent mostrem el temps que triga el programa a calcular els valors de la temperatura en els punts de la placa fins a diferents temps finals:
+Tot i això, aquest mètode ens permet obtenir una precisió molt més elevada en un temps raonable, ja que no tenim cap condició d'estabilitat a satisfer-se i a més l'ordre de convergència és $\O{{\delta_t}^2 + {\delta_x}^2 + {\delta_y}^2}$. A la taula següent mostrem el temps que triga el programa a calcular els valors de la temperatura en els punts de la placa fins a diferents temps finals si volem obtenir una precisió de l'ordre de $10^{-4}$:
 \begin{table}[ht]
   \centering
-  \begin{tabular}{c|c}
+  \begin{tabular}{|c|c|}
+    \hline
     $T$  & Temps emprat [s] \\ \hline\hline
     0.01 & 0.111025         \\
     0.1  & 1.057527         \\
-    1    & 9.849696
+    1    & 9.849696         \\
+    \hline
   \end{tabular}
-  \caption{Temps que triga l'esquema explícit en calcular i escriure a un fitxer tots els valors en cada graella (usant $\delta_x= \delta_y=0.01$ i $\delta_t=0.001$) fins a diferents temps finals.}
+  \caption{Temps que triga l'esquema implícit de Crank-Nicolson en calcular i escriure a un fitxer tots els valors en cada graella (usant $\delta_x= \delta_y=0.01$ i $\delta_t=0.0001$) fins a diferents temps finals.}
 \end{table}
+
 Finalment, donant aquest esquema com a bo, els resultats que obtenim en integrar l'equació de la calor sobre la placa d'acer es mostren a les següents imatges:
 \begin{figure}[ht]
   \centering\vspace{-1cm}
   \begin{subfigure}{0.49\linewidth}
+    \centering
     \includegraphics[width=\textwidth]{../plot/Images/heatmap_00010.pdf}
   \end{subfigure}\hfill
   \begin{subfigure}{0.49\linewidth}
+    \centering
     \includegraphics[width=\textwidth]{../plot/Images/heatmap_00030.pdf}
   \end{subfigure}\\\vspace{-1cm}
   \begin{subfigure}{0.49\linewidth}
+    \centering
     \includegraphics[width=\textwidth]{../plot/Images/heatmap_00060.pdf}
   \end{subfigure}\hfill
   \begin{subfigure}{0.49\linewidth}
+    \centering
     \includegraphics[width=\textwidth]{../plot/Images/heatmap_00100.pdf}
   \end{subfigure}
   \caption{Temperatura a la placa d'acer en els temps $\tau=0.1,0.3,0.6,1$.}
 \end{figure}
-\begin{figure}[ht]
+
+També podem representar diverses seccions de la placa i graficar les diverses corbes que obtenim en diversos temps:
+
+\begin{figure}[t!]
   \centering
-  \includegraphics[width=0.5\linewidth]{Images/graphic.pdf}
+  \begin{subfigure}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Images/graphic50.pdf}
+    \caption{Secció $x=0.5$}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{Images/graphic20.pdf}
+    \caption{Secció $x=0.2$}
+  \end{subfigure}
   \caption{Evolució de la temperatura a la secció $x=0.5$ de la placa.}
 \end{figure}
 \end{document}

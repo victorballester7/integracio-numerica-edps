@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
   // Exercice 3c
   // we need a to impose 10^-4 = dx^2 ==> dx = 0.01 ==> dt < 0.0001 to impose the condition of stability.
   printf("\nExercise 3c)\nIf we want to obtain a precision of 1.e-4 execute with: ./bin/main 0.01 0.01 100 100 1.e-5 1\n");
-  printf("It takes to much time... :(\n");
+  printf("It takes too much time... :(\n");
 
   fclose(fp);
   return 0;

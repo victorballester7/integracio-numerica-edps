@@ -18,8 +18,8 @@ if [ -z "$7" ]; then
   echo "No arguments provided. Use the syntax: ./execute.sh $1 <dx> <dy> <nx> <ny> <dt> <tf>"
   case $1 in
     $ex2)
-      echo "Executing the default command: ./$BIN/$1 0.01 0.01 100 100 0.001 1"
-      ./$BIN/$1 0.01 0.01 100 100 0.001 1
+      echo "Executing the default command: ./$BIN/$1 0.1 0.1 10 10 0.001 0.1"
+      ./$BIN/$1 0.1 0.1 10 10 0.001 0.1
       ;;
     $ex3)
       echo "Executing the default command: ./$BIN/$1 0.1 0.1 10 10 0.1 1"

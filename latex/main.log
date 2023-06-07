@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.3)  6 JUN 2023 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.7)  7 JUN 2023 09:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -351,32 +351,37 @@ Package caption Info: New subtype `subfigure' on input line 239.
 \c@subfigure=\count296
 Package caption Info: New subtype `subtable' on input line 239.
 \c@subtable=\count297
-)
-\c@theorem=\count298
-\c@exercici=\count299
-\c@prop=\count300
-\c@definition=\count301
+) (/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count298
+))
+\c@theorem=\count299
+\c@exercici=\count300
+\c@prop=\count301
+\c@definition=\count302
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
  (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
@@ -391,16 +396,16 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count302
+\scratchcounter=\count303
 \scratchdimen=\dimen190
 \scratchbox=\box57
-\nofMPsegments=\count303
-\nofMParguments=\count304
+\nofMPsegments=\count304
+\nofMParguments=\count305
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count305
+\MPscratchCnt=\count306
 \MPscratchDim=\dimen191
-\MPnumerator=\count306
-\makeMPintoPDFobject=\count307
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
 \everyMPtoPDFconversion=\toks34
 ))) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -452,62 +457,67 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 95.
+Package hyperref Info: Link coloring ON on input line 101.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Info: Redefining \l on input line 95.
-LaTeX Info: Redefining \L on input line 95.
+LaTeX Info: Redefining \l on input line 101.
+LaTeX Info: Redefining \L on input line 101.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00010.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00010.pdf, id=22, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00010.pdf, id=28, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00010.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00010.pdf>
-Package pdftex.def Info: ../plot/Images/heatmap_00010.pdf  used on input line 201.
+Package pdftex.def Info: ../plot/Images/heatmap_00010.pdf  used on input line 216.
 (pdftex.def)             Requested size: 237.01411pt x 237.01184pt.
 
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00030.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00030.pdf, id=23, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00030.pdf, id=29, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00030.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00030.pdf>
-Package pdftex.def Info: ../plot/Images/heatmap_00030.pdf  used on input line 204.
+Package pdftex.def Info: ../plot/Images/heatmap_00030.pdf  used on input line 220.
 (pdftex.def)             Requested size: 237.01411pt x 237.01184pt.
 
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00060.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00060.pdf, id=24, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00060.pdf, id=30, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00060.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00060.pdf>
-Package pdftex.def Info: ../plot/Images/heatmap_00060.pdf  used on input line 207.
+Package pdftex.def Info: ../plot/Images/heatmap_00060.pdf  used on input line 224.
 (pdftex.def)             Requested size: 237.01411pt x 237.01184pt.
 
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00100.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00100.pdf, id=25, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00100.pdf, id=31, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00100.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00100.pdf>
-Package pdftex.def Info: ../plot/Images/heatmap_00100.pdf  used on input line 210.
+Package pdftex.def Info: ../plot/Images/heatmap_00100.pdf  used on input line 228.
 (pdftex.def)             Requested size: 237.01411pt x 237.01184pt.
-<Images/graphic.pdf, id=26, 271.05363pt x 210.87582pt>
-File: Images/graphic.pdf Graphic file (type pdf)
-<use Images/graphic.pdf>
-Package pdftex.def Info: Images/graphic.pdf  used on input line 216.
-(pdftex.def)             Requested size: 241.84843pt x 188.15833pt.
-[2] [3 <../plot/Images/heatmap_00010.pdf> <../plot/Images/heatmap_00030.pdf
+<Images/graphic50.pdf, id=32, 271.05363pt x 210.87582pt>
+File: Images/graphic50.pdf Graphic file (type pdf)
+<use Images/graphic50.pdf>
+Package pdftex.def Info: Images/graphic50.pdf  used on input line 239.
+(pdftex.def)             Requested size: 237.01411pt x 184.39684pt.
+<Images/graphic20.pdf, id=33, 271.05363pt x 210.88084pt>
+File: Images/graphic20.pdf Graphic file (type pdf)
+<use Images/graphic20.pdf>
+Package pdftex.def Info: Images/graphic20.pdf  used on input line 244.
+(pdftex.def)             Requested size: 237.01411pt x 184.40121pt.
+[3 <../plot/Images/heatmap_00010.pdf> <../plot/Images/heatmap_00030.pdf
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00030.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <../plot/Images/heatmap_00060.pdf
@@ -516,23 +526,23 @@ pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00060.pdf): PDF inclusion:
 > <../plot/Images/heatmap_00100.pdf
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00100.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [4 <./Images/graphic.pdf>] (./main.aux)
+>] [4 <./Images/graphic50.pdf> <./Images/graphic20.pdf>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14629 strings out of 476025
- 233391 string characters out of 5796533
- 1879388 words of memory out of 5000000
- 34875 multiletter control sequences out of 15000+600000
- 519544 words of font info for 61 fonts, out of 8000000 for 9000
+ 15005 strings out of 476025
+ 238665 string characters out of 5796533
+ 1878388 words of memory out of 5000000
+ 35239 multiletter control sequences out of 15000+600000
+ 521089 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,77p,679b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (4 pages, 817291 bytes).
+ 75i,12n,77p,1245b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (4 pages, 851834 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 179 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  11 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
