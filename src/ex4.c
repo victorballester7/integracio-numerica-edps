@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
     write_grid(&gr, fp);
   }
 
-  // Exercice 2 or 4 (measuring the error with polynomial functions)
+  // Exercice 4 (measuring the error with polynomial functions)
   double errorLoo = 0;
   for (int i = 0; i < gr.nx + 1; i++) {
     for (int j = 0; j < gr.ny + 1; j++)

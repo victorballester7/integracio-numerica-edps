@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.7)  7 JUN 2023 09:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.9)  27 JUN 2023 21:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -478,7 +478,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00010.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00010.pdf, id=28, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00010.pdf, id=29, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00010.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00010.pdf>
 Package pdftex.def Info: ../plot/Images/heatmap_00010.pdf  used on input line 216.
@@ -486,7 +486,7 @@ Package pdftex.def Info: ../plot/Images/heatmap_00010.pdf  used on input line 21
 
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00030.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00030.pdf, id=29, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00030.pdf, id=30, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00030.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00030.pdf>
 Package pdftex.def Info: ../plot/Images/heatmap_00030.pdf  used on input line 220.
@@ -494,7 +494,7 @@ Package pdftex.def Info: ../plot/Images/heatmap_00030.pdf  used on input line 22
 
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00060.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00060.pdf, id=30, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00060.pdf, id=31, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00060.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00060.pdf>
 Package pdftex.def Info: ../plot/Images/heatmap_00060.pdf  used on input line 224.
@@ -502,21 +502,21 @@ Package pdftex.def Info: ../plot/Images/heatmap_00060.pdf  used on input line 22
 
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00100.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../plot/Images/heatmap_00100.pdf, id=31, 289.08pt x 289.08pt>
+<../plot/Images/heatmap_00100.pdf, id=32, 289.08pt x 289.08pt>
 File: ../plot/Images/heatmap_00100.pdf Graphic file (type pdf)
 <use ../plot/Images/heatmap_00100.pdf>
 Package pdftex.def Info: ../plot/Images/heatmap_00100.pdf  used on input line 228.
 (pdftex.def)             Requested size: 237.01411pt x 237.01184pt.
-<Images/graphic50.pdf, id=32, 271.05363pt x 210.87582pt>
+<Images/graphic50.pdf, id=33, 271.48625pt x 210.87582pt>
 File: Images/graphic50.pdf Graphic file (type pdf)
 <use Images/graphic50.pdf>
 Package pdftex.def Info: Images/graphic50.pdf  used on input line 239.
-(pdftex.def)             Requested size: 237.01411pt x 184.39684pt.
-<Images/graphic20.pdf, id=33, 271.05363pt x 210.88084pt>
+(pdftex.def)             Requested size: 237.01411pt x 184.09758pt.
+<Images/graphic20.pdf, id=34, 271.48625pt x 210.88084pt>
 File: Images/graphic20.pdf Graphic file (type pdf)
 <use Images/graphic20.pdf>
 Package pdftex.def Info: Images/graphic20.pdf  used on input line 244.
-(pdftex.def)             Requested size: 237.01411pt x 184.40121pt.
+(pdftex.def)             Requested size: 237.01411pt x 184.10196pt.
 [3 <../plot/Images/heatmap_00010.pdf> <../plot/Images/heatmap_00030.pdf
 
 pdfTeX warning: pdflatex (file ../plot/Images/heatmap_00030.pdf): PDF inclusion: multiple pdfs with page group included in a single page
@@ -538,11 +538,11 @@ Here is how much of TeX's memory you used:
  521089 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,77p,1245b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (4 pages, 851834 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (4 pages, 863043 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 193 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  11 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

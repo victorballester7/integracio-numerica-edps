@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
   }
 
   double w = 1.7, TOL = 1e-10;
-  int maxit = 20;
+  int maxit = 200;
 
   // compute the solution
   clock_t t_init = clock();

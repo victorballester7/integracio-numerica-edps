@@ -121,9 +121,9 @@ on $\mu_x = \delta_t/{\delta_x}^2$ i $\mu_y = \delta_t/{\delta_y}^2$ i $f_{k,i,j
 
 Fixem-nos que aquest mètode és exacte per a polinomis de grau $\leq 1$ en $t$ i grau $\leq 3$ en l'espai. Això es deu a l'expansió en sèrie de Taylor de $u$: d'una banda el coeficient que multiplica l'error $\O{\delta_t}$ de la diferència finita pel temps de primer ordre involucra $u_{tt}=0$ i anàlogament amb les derivades per l'espai d'ordre 2 (el terme de l'error involucra derivades d'ordre 4, que són nu\lgem es). Això ho podem comprovar també numèricament. Considerem el polinomi
 $$u(t,x,y)=1+t+x^2+y^2+x^3$$
-Prenent $f(t,x,y)= -3-6x$, $g(t,x,y)=1+t+x^2+y^2+x^3$ i $h(x,y)=1+x^2+y^2+x^3$ tenim que la solució del problema \eqref{eq:problema} és precisament $u(t,x,y)$. Així doncs, si prenem per exemple $\delta_x=0.1$, $\delta_y=0.1$ i $\delta_t=0.001$, que compleixen la condició d'estabilitat, per a $\Omega = [0,1]\times[0,1]$ i $T=0.1$ obtenim un error en norma $\norm{\cdot}_\infty$ entre la solució real i l'aproximada de $5.77316\cdot 10^{-15}$, que es pot considerar com a error d'aritmètica en punt flotant.\vspace*{0.25cm}
+Prenent $f(t,x,y)= -3-6x$, $g(t,x,y)=1+t+x^2+y^2+x^3$ i $h(x,y)=1+x^2+y^2+x^3$ tenim que la solució del problema \eqref{eq:problema} és precisament $u(t,x,y)$. Així doncs, si prenem per exemple $\delta_x=0.1$, $\delta_y=0.1$ i $\delta_t=0.001$, que compleixen la condició d'estabilitat, per a $\Omega = [0,1]\times[0,1]$ i $T=1$ obtenim un error en norma $\norm{\cdot}_\infty$ entre la solució real i l'aproximada de $5.329\,07\cdot 10^{-15}$, que es pot considerar com a error d'aritmètica en punt flotant.\vspace*{0.25cm}
 
-Considerem ara una placa d'acer de densitat $\rho= 7.8\ \frac{\mathrm{g}}{\mathrm{cm}^3}$, conductivitat tèrmica $\kappa = 0.13\ \frac{\mathrm{cal}}{\mathrm{cm}\cdot\mathrm{s}\cdot\mathrm{K}}$ i calor específic $c=0.11\ \frac{\mathrm{cal}}{\mathrm{g}\cdot\mathrm{K}}$. Posem una font de calor a sota de la placa que genera $F(\tau, x,y) \ \frac{\mathrm{cal}}{\mathrm{s}\cdot\mathrm{cm}^3}$ a l'instant $\tau$ i al punt $(x,y)$, on $F$ està definida per:
+Considerem ara una placa d'acer de densitat $\rho= 7.8\ \frac{\mathrm{g}}{\mathrm{cm}^3}$, conductivitat tèrmica $\kappa = 0.13\ \frac{\mathrm{cal}}{\mathrm{cm}\cdot\mathrm{s}\cdot^\circ\mathrm{C}}$ i calor específic $c=0.11\ \frac{\mathrm{cal}}{\mathrm{g}\cdot^\circ\mathrm{C}}$. Posem una font de calor a sota de la placa que genera $F(\tau, x,y) \ \frac{\mathrm{cal}}{\mathrm{s}\cdot\mathrm{cm}^3}$ a l'instant $\tau$ i al punt $(x,y)$, on $F$ està definida per:
 $$
   F(\tau, x,y) = \begin{cases}
     100 & \text{si } \norm{(x,y)-(\frac{1}{2},\frac{1}{2})}_2 <\frac{1}{5} \\
@@ -138,7 +138,7 @@ $$
     v=0                                           & \text{a } \{0\} \times \Omega         \\
   \end{cases}
 $$
-Usant el canvi de variables $t=\frac{\kappa}{c\rho}\tau$, tenim que $\dv{t}{\tau}= \frac{\kappa}{c\rho}$ i per tant si $u(t,x,y)=v(\tau,x,y)$, usant la regla de la cadena, $u_t = v_\tau \frac{\kappa}{c\rho}$ (i clarament $\Delta u=\Delta v$). Així doncs, el problema anterior es pot reescriure com:
+Usant el canvi de variables $t=\frac{\kappa}{c\rho}\tau$, tenim que $\dv{t}{\tau}= \frac{\kappa}{c\rho}$ i per tant si $u(t,x,y)=v(\tau,x,y)$, usant la regla de la cadena, $u_t = v_\tau \frac{c\rho}{\kappa}$ (i clarament $\Delta u=\Delta v$). Així doncs, el problema anterior es pot reescriure com:
 $$
   \begin{cases}
     \displaystyle u_t -\Delta u = \frac{1}{\kappa} F\left(\frac{c\rho}{\kappa}t,x,y\right) & \displaystyle\text{a } \left[0,\frac{\kappa}{c\rho}T\right] \times \Omega  \vspace{0.1cm} \\
@@ -152,18 +152,18 @@ La condició d'estabilitat en l'esquema explícit que hem descrit anteriorment �
   \centering
   \begin{tabular}{|c|c|c|}
     \hline
-    $x$ & $y$ & $v(0.9,x,y)$        \\ \hline\hline
-    0.3 & 0.0 & 0                   \\
-    0.3 & 0.1 & 42286728.810146     \\
-    0.3 & 0.2 & $-111988126.131011$ \\
-    0.3 & 0.3 & 199241046.679864    \\
-    0.3 & 0.4 & $-259680534.657868$ \\
-    0.3 & 0.5 & 263234236.257432    \\
-    0.3 & 0.6 & $-210322365.754957$ \\
-    0.3 & 0.7 & 126199592.465624    \\
-    0.3 & 0.8 & $-54636211.331768$  \\
-    0.3 & 0.9 & 16318289.975168     \\
-    0.3 & 1.0 & 0                   \\
+    $x$ & $y$ & $v(0.9,x,y)$              \\ \hline\hline
+    0.3 & 0.0 & 0                         \\
+    0.3 & 0.1 & $42\,286\,728.810\,146$   \\
+    0.3 & 0.2 & $-111\,988\,126.131\,011$ \\
+    0.3 & 0.3 & $199\,241\,046.679\,864$  \\
+    0.3 & 0.4 & $-259\,680\,534.657\,868$ \\
+    0.3 & 0.5 & $263\,234\,236.257\,432$  \\
+    0.3 & 0.6 & $-210\,322\,365.754\,957$ \\
+    0.3 & 0.7 & $126\,199\,592.465\,624$  \\
+    0.3 & 0.8 & $-54\,636\,211.331\,768$  \\
+    0.3 & 0.9 & $16\,318\,289.975\,168$   \\
+    0.3 & 1.0 & 0                         \\
     \hline
   \end{tabular}
 \end{table}
@@ -174,10 +174,10 @@ Observem valors molt grossos i negatius, que no tenen sentit físic, ja que esta
   \begin{tabular}{|c|c|}
     \hline
     $T$    & Temps emprat [s] \\ \hline\hline
-    0.0001 & 0.047858         \\
-    0.001  & 0.569544         \\
-    0.01   & 5.613888         \\
-    0.1    & 57.489433        \\
+    0.0001 & $0.047\,858$     \\
+    0.001  & $0.569\,544$     \\
+    0.01   & $5.613\,888$     \\
+    0.1    & $57.489\,433$    \\
     \hline
   \end{tabular}
   \caption{Temps que triga l'esquema explícit en calcular i escriure a un fitxer tots els valors en cada graella (usant $\delta_x= \delta_y=0.01$ i $\delta_t=10^{-5}$) fins a diferents temps finals.}
@@ -190,7 +190,7 @@ Una solució alternativa és emprar un mètode implícit, com ara el de Crank-Ni
   \frac{v_{k+1,i,j}-v_{k,i,j}}{\delta_t} & - \frac{1}{2}\left(\frac{v_{k+1,i+1,j}-2v_{k+1,i,j}+v_{k+1,i-1,j}}{{\delta_x}^2} +\frac{v_{k,i+1,j}-2v_{k,i,j}+v_{k,i-1,j}}{{\delta_x}^2} \right)  -                                             \\
                                          & -\frac{1}{2}\left( \frac{v_{k+1,i,j+1}-2v_{k+1,i,j}+v_{k+1,i,j-1}}{{\delta_y}^2}+ \frac{v_{k,i,j+1}-2v_{k,i,j}+v_{k,i,j-1}}{{\delta_y}^2}\right) = \frac{1}{2}\left(f_{k+1,i,j}+f_{k,i,j}\right)
 \end{align*}
-on hem usat la notació de \eqref{eq:problema}. Per resoldre aquest sistema, hem de resoldre un sistema lineal en les incògnites $\{v_{k+1,i,j}\}_{i,j}$, i usarem el mètode SOR amb paràmetre $\omega = 1$ per a fer-ho.
+on hem usat la notació de \eqref{eq:problema}. Per resoldre aquest sistema, hem de resoldre un sistema lineal en les incògnites $\{v_{k+1,i,j}\}_{i,j}$, i usarem el mètode SOR amb paràmetre $\omega = 1.7$ per a fer-ho.
 
 Ara, però, a diferència del que teníem amb el mètode explícit, l'esquema de diferències finites no serà exacte quan l'apliquem a polinomis. En efecte, prenent els mateixos valors que anteriorment ($\delta_x=\delta_y=0.1$, $\delta_t=0.001$ i $T=1$), obtenim un error en norma $\norm{\cdot}_\infty$ de $9.17816\times 10^{-5}$, que està lluny de ser considerat com a error de punt flotant.
 
@@ -200,12 +200,12 @@ Tot i això, aquest mètode ens permet obtenir una precisió molt més elevada e
   \begin{tabular}{|c|c|}
     \hline
     $T$  & Temps emprat [s] \\ \hline\hline
-    0.01 & 0.111025         \\
-    0.1  & 1.057527         \\
-    1    & 9.849696         \\
+    0.01 & $0.107\,239$     \\
+    0.1  & $1.056\,454$     \\
+    1    & $9.937\,089$     \\
     \hline
   \end{tabular}
-  \caption{Temps que triga l'esquema implícit de Crank-Nicolson en calcular i escriure a un fitxer tots els valors en cada graella (usant $\delta_x= \delta_y=0.01$ i $\delta_t=0.0001$) fins a diferents temps finals.}
+  \caption{Temps que triga l'esquema implícit de Crank-Nicolson en calcular i escriure a un fitxer tots els valors en cada graella (usant $\delta_x= \delta_y=0.01$ i $\delta_t=0.001$) fins a diferents temps finals.}
 \end{table}
 
 Finalment, donant aquest esquema com a bo, els resultats que obtenim en integrar l'equació de la calor sobre la placa d'acer es mostren a les següents imatges:
@@ -244,6 +244,6 @@ També podem representar diverses seccions de la placa i graficar les diverses c
     \includegraphics[width=\linewidth]{Images/graphic20.pdf}
     \caption{Secció $x=0.2$}
   \end{subfigure}
-  \caption{Evolució de la temperatura a la secció $x=0.5$ de la placa.}
+  \caption{Evolució de la temperatura a les seccions $x=0.5$ i $x=0.2$ de la placa.}
 \end{figure}
 \end{document}
