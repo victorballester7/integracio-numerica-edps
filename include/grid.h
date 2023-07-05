@@ -15,6 +15,9 @@
 #define MUX gr->mux
 #define MUY gr->muy
 #define U(j, i) gr->u[(NX + 1) * (j) + (i)]  // we store the array by rows. The indexes are: i = column counter in X axis (rightwards) and j = row counter in Y axis (downwards)
+#define AUX(j, i) aux[(NX + 1) * (j) + (i)]
+
+double *aux;
 
 // ----------------------------------------------
 // Grid

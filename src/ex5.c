@@ -33,17 +33,20 @@ int main(int argc, char *argv[]) {
   int maxit = 200;
 
   // compute the solution
-  clock_t t_init = clock();
+  clock_t total = 0, t_init, t_end;
   write_grid(&gr, fp);
   for (int i = 1; i < nt; i++) {
     fprintf(fp, "\n");  // To avoid gnuplot detecting an extra datablock.
+    t_init = clock();
     CrankNicolsonStep(&gr, w, TOL, maxit, f, g);
+    t_end = clock();
+    total += t_end - t_init;
     write_grid(&gr, fp);
   }
 
-  clock_t t_end = clock();
+  printf("Time employed: %lf\n", (double)total / CLOCKS_PER_SEC);
 
-  printf("Time employed: %lf\n", ((double)(t_end - t_init)) / CLOCKS_PER_SEC);
+  free_grid(&gr);
   fclose(fp);
   return 0;
 }

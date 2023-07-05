@@ -28,16 +28,18 @@ int main(int argc, char *argv[]) {
   }
 
   // compute the solution
-  clock_t t_init = clock();
+  clock_t total = 0, t_init, t_end;
   write_grid(&gr, fp);
   for (int i = 1; i < nt; i++) {
     fprintf(fp, "\n");  // To avoid gnuplot detecting an extra datablock.
+    t_init = clock();
     ExplicitStep(&gr, f, g);
+    t_end = clock();
+    total += t_end - t_init;
     write_grid(&gr, fp);
   }
-  clock_t t_end = clock();
 
-  printf("Time employed: %lf\n", ((double)(t_end - t_init)) / CLOCKS_PER_SEC);
+  printf("Time employed: %lf\n", (double)total / CLOCKS_PER_SEC);
 
   // Exercice 3b
   printf("\nExercise 3b)\nIn order to show the inestability of the scheme when 1 - 2 * mu_x - 2 * mu_y < 0, execute with (for example): ./bin/main 0.1 0.1 10 10 0.1 1\n");
@@ -48,6 +50,7 @@ int main(int argc, char *argv[]) {
   printf("\nExercise 3c)\nIf we want to obtain a precision of 1.e-4 execute with: ./bin/main 0.01 0.01 100 100 1.e-5 1\n");
   printf("It takes too much time... :(\n");
 
+  free_grid(&gr);
   fclose(fp);
   return 0;
 }

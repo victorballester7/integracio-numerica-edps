@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
   printf("\nError in norm Loo: %g\n\n", errorLoo);
   printf("We see that the error is ~0 because the method is exact for polynomials.\n");
 
+  free_grid(&gr);
   fclose(fp);
   return 0;
 }

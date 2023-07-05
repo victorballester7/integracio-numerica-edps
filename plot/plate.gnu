@@ -19,8 +19,8 @@ maxTemp=ceil(STATS_max) # round up to nearest integer of the maximum temperature
 
 # set margins 0,0,0,0
 # set border 0
-set tmargin 0
-set bmargin 0
+set tmargin 0 # remove top margin
+set bmargin 0 # remove bottom margin
 # show margins
 set size ratio -1 # set aspect ratio x-y to 1
 set xlabel "x"
